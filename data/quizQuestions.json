@@ -1,0 +1,707 @@
+[
+  {
+    "question": "When you walk into a room of strangers, you…",
+    "options": [
+      {
+        "text": "Scan who holds power and decide when to speak.",
+        "weights": {
+          "Sovereign": 0.75,
+          "Wanderer": 0.25
+        }
+      },
+      {
+        "text": "Note the possibilities and imagine new futures.",
+        "weights": {
+          "Visionary": 0.75,
+          "Partner": 0.25
+        }
+      },
+      {
+        "text": "Blend in and quietly support whomever needs it.",
+        "weights": {
+          "Servant": 0.75,
+          "Mask": 0.25
+        }
+      },
+      {
+        "text": "Find the safest corner and observe everything first.",
+        "weights": {
+          "Guardian": 0.75,
+          "Provider": 0.25
+        }
+      },
+      {
+        "text": "Say something sharp just to watch reactions.",
+        "weights": {
+          "Rebel": 0.75,
+          "Spotlight": 0.25
+        }
+      },
+      {
+        "text": "Feel the emotional temperature, then bring balance.",
+        "weights": {
+          "Equalizer": 0.75,
+          "Seeker": 0.25
+        }
+      }
+    ]
+  },
+  {
+    "question": "Success feels most real when…",
+    "options": [
+      {
+        "text": "Everyone feels protected and supplied because of you.",
+        "weights": {
+          "Guardian": 0.25,
+          "Provider": 0.75
+        }
+      },
+      {
+        "text": "The crowd erupts and you OWN the moment.",
+        "weights": {
+          "Rebel": 0.25,
+          "Spotlight": 0.75
+        }
+      },
+      {
+        "text": "You uncover a hidden truth no one else saw.",
+        "weights": {
+          "Equalizer": 0.25,
+          "Seeker": 0.75
+        }
+      },
+      {
+        "text": "Your idea becomes tangible and inspires others.",
+        "weights": {
+          "Visionary": 0.25,
+          "Partner": 0.75
+        }
+      },
+      {
+        "text": "You can wander freely with no demands on you.",
+        "weights": {
+          "Sovereign": 0.25,
+          "Wanderer": 0.75
+        }
+      },
+      {
+        "text": "Someone quietly thanks you for saving their day.",
+        "weights": {
+          "Servant": 0.25,
+          "Mask": 0.75
+        }
+      }
+    ]
+  },
+  {
+    "question": "Conflict shows up. Your first internal move is…",
+    "options": [
+      {
+        "text": "Command the space and set the terms.",
+        "weights": {
+          "Sovereign": 0.75,
+          "Wanderer": 0.25
+        }
+      },
+      {
+        "text": "Paint a bigger future so everyone eases up.",
+        "weights": {
+          "Visionary": 0.75,
+          "Partner": 0.25
+        }
+      },
+      {
+        "text": "Break the rules to see who notices.",
+        "weights": {
+          "Rebel": 0.75,
+          "Spotlight": 0.25
+        }
+      },
+      {
+        "text": "Quietly absorb the tension so others don't feel it.",
+        "weights": {
+          "Servant": 0.75,
+          "Mask": 0.25
+        }
+      },
+      {
+        "text": "Search for the underlying pattern you're missing.",
+        "weights": {
+          "Equalizer": 0.75,
+          "Seeker": 0.25
+        }
+      },
+      {
+        "text": "Shield the most vulnerable person in the room.",
+        "weights": {
+          "Guardian": 0.75,
+          "Provider": 0.25
+        }
+      }
+    ]
+  },
+  {
+    "question": "When someone praises you, you secretly…",
+    "options": [
+      {
+        "text": "Turn it into fuel for your next big idea.",
+        "weights": {
+          "Visionary": 0.25,
+          "Partner": 0.75
+        }
+      },
+      {
+        "text": "Check if everyone else is taken care of first.",
+        "weights": {
+          "Guardian": 0.25,
+          "Provider": 0.75
+        }
+      },
+      {
+        "text": "Dissect why they see you that way at all.",
+        "weights": {
+          "Equalizer": 0.25,
+          "Seeker": 0.75
+        }
+      },
+      {
+        "text": "Wonder if you've really earned it.",
+        "weights": {
+          "Servant": 0.25,
+          "Mask": 0.75
+        }
+      },
+      {
+        "text": "Crave a larger stage and brighter lights.",
+        "weights": {
+          "Rebel": 0.25,
+          "Spotlight": 0.75
+        }
+      },
+      {
+        "text": "Feel restless and want to drift on to the next thing.",
+        "weights": {
+          "Sovereign": 0.25,
+          "Wanderer": 0.75
+        }
+      }
+    ]
+  },
+  {
+    "question": "Your energy spikes when…",
+    "options": [
+      {
+        "text": "You glimpse a future no one else imagined.",
+        "weights": {
+          "Visionary": 0.75,
+          "Partner": 0.25
+        }
+      },
+      {
+        "text": "Protection and provision click into place perfectly.",
+        "weights": {
+          "Guardian": 0.75,
+          "Provider": 0.25
+        }
+      },
+      {
+        "text": "Someone's load becomes lighter because of you.",
+        "weights": {
+          "Servant": 0.75,
+          "Mask": 0.25
+        }
+      },
+      {
+        "text": "You decree a bold new boundary and feel it hold.",
+        "weights": {
+          "Sovereign": 0.75,
+          "Wanderer": 0.25
+        }
+      },
+      {
+        "text": "You flip a stale situation upside‑down.",
+        "weights": {
+          "Rebel": 0.75,
+          "Spotlight": 0.25
+        }
+      },
+      {
+        "text": "A hidden connection suddenly makes sense.",
+        "weights": {
+          "Equalizer": 0.75,
+          "Seeker": 0.25
+        }
+      }
+    ]
+  },
+  {
+    "question": "Silence feels like…",
+    "options": [
+      {
+        "text": "The blank canvas before the next vision lands.",
+        "weights": {
+          "Visionary": 0.25,
+          "Partner": 0.75
+        }
+      },
+      {
+        "text": "An invitation to analyze what isn't said.",
+        "weights": {
+          "Equalizer": 0.25,
+          "Seeker": 0.75
+        }
+      },
+      {
+        "text": "A chance to sense what others require.",
+        "weights": {
+          "Servant": 0.25,
+          "Mask": 0.75
+        }
+      },
+      {
+        "text": "A moment to secure everyone's safety.",
+        "weights": {
+          "Guardian": 0.25,
+          "Provider": 0.75
+        }
+      },
+      {
+        "text": "A stage with no lights — intolerable.",
+        "weights": {
+          "Rebel": 0.25,
+          "Spotlight": 0.75
+        }
+      },
+      {
+        "text": "Freedom to vanish if I wish.",
+        "weights": {
+          "Sovereign": 0.25,
+          "Wanderer": 0.75
+        }
+      }
+    ]
+  },
+  {
+    "question": "Under extreme stress you usually…",
+    "options": [
+      {
+        "text": "Stand guard for everyone else's emotions.",
+        "weights": {
+          "Guardian": 0.75,
+          "Provider": 0.25
+        }
+      },
+      {
+        "text": "Break the issue into patterns and fix the root.",
+        "weights": {
+          "Equalizer": 0.75,
+          "Seeker": 0.25
+        }
+      },
+      {
+        "text": "Escape into imagination and future‑build.",
+        "weights": {
+          "Visionary": 0.75,
+          "Partner": 0.25
+        }
+      },
+      {
+        "text": "Explode the rules so something new can emerge.",
+        "weights": {
+          "Rebel": 0.75,
+          "Spotlight": 0.25
+        }
+      },
+      {
+        "text": "Disappear into service until the storm passes.",
+        "weights": {
+          "Servant": 0.75,
+          "Mask": 0.25
+        }
+      },
+      {
+        "text": "Take total control, no matter the cost.",
+        "weights": {
+          "Sovereign": 0.75,
+          "Wanderer": 0.25
+        }
+      }
+    ]
+  },
+  {
+    "question": "The compliment that hits deepest is…",
+    "options": [
+      {
+        "text": "\"I felt safe because you were there.\"",
+        "weights": {
+          "Guardian": 0.25,
+          "Provider": 0.75
+        }
+      },
+      {
+        "text": "\"Your presence made us all feel free.\"",
+        "weights": {
+          "Sovereign": 0.25,
+          "Wanderer": 0.75
+        }
+      },
+      {
+        "text": "\"You lit the room on fire.\"",
+        "weights": {
+          "Rebel": 0.25,
+          "Spotlight": 0.75
+        }
+      },
+      {
+        "text": "\"Your idea changed my direction.\"",
+        "weights": {
+          "Visionary": 0.25,
+          "Partner": 0.75
+        }
+      },
+      {
+        "text": "\"You saw the real issue before anyone else.\"",
+        "weights": {
+          "Equalizer": 0.25,
+          "Seeker": 0.75
+        }
+      },
+      {
+        "text": "\"I felt cared for without asking.\"",
+        "weights": {
+          "Servant": 0.25,
+          "Mask": 0.75
+        }
+      }
+    ]
+  },
+  {
+    "question": "A perfect day ends with…",
+    "options": [
+      {
+        "text": "Standing somewhere no one can command me.",
+        "weights": {
+          "Sovereign": 0.75,
+          "Wanderer": 0.25
+        }
+      },
+      {
+        "text": "Sketching the seed of the next impossible thing.",
+        "weights": {
+          "Visionary": 0.75,
+          "Partner": 0.25
+        }
+      },
+      {
+        "text": "Seeing everyone supplied and settled.",
+        "weights": {
+          "Guardian": 0.75,
+          "Provider": 0.25
+        }
+      },
+      {
+        "text": "Leaving someone lighter than I found them.",
+        "weights": {
+          "Servant": 0.75,
+          "Mask": 0.25
+        }
+      },
+      {
+        "text": "Knowing I disrupted what needed disrupting.",
+        "weights": {
+          "Rebel": 0.75,
+          "Spotlight": 0.25
+        }
+      },
+      {
+        "text": "Solving a puzzle that bothered me for weeks.",
+        "weights": {
+          "Equalizer": 0.75,
+          "Seeker": 0.25
+        }
+      }
+    ]
+  },
+  {
+    "question": "Which loss would cut deepest?",
+    "options": [
+      {
+        "text": "My spotlight and platform.",
+        "weights": {
+          "Rebel": 0.25,
+          "Spotlight": 0.75
+        }
+      },
+      {
+        "text": "My ability to understand.",
+        "weights": {
+          "Equalizer": 0.25,
+          "Seeker": 0.75
+        }
+      },
+      {
+        "text": "My freedom to decide.",
+        "weights": {
+          "Sovereign": 0.25,
+          "Wanderer": 0.75
+        }
+      },
+      {
+        "text": "My place at someone's side.",
+        "weights": {
+          "Servant": 0.25,
+          "Mask": 0.75
+        }
+      },
+      {
+        "text": "My ability to keep others safe.",
+        "weights": {
+          "Guardian": 0.25,
+          "Provider": 0.75
+        }
+      },
+      {
+        "text": "My next vision.",
+        "weights": {
+          "Visionary": 0.25,
+          "Partner": 0.75
+        }
+      }
+    ]
+  },
+  {
+    "question": "How do you rebuild after failure?",
+    "options": [
+      {
+        "text": "Analyze pattern errors until it clicks.",
+        "weights": {
+          "Equalizer": 0.75,
+          "Seeker": 0.25
+        }
+      },
+      {
+        "text": "Serve the solution before I serve myself.",
+        "weights": {
+          "Servant": 0.75,
+          "Mask": 0.25
+        }
+      },
+      {
+        "text": "Fortify the foundation stronger than before.",
+        "weights": {
+          "Guardian": 0.75,
+          "Provider": 0.25
+        }
+      },
+      {
+        "text": "Redraw the power lines and claim them.",
+        "weights": {
+          "Sovereign": 0.75,
+          "Wanderer": 0.25
+        }
+      },
+      {
+        "text": "Turn failure into concept fuel.",
+        "weights": {
+          "Visionary": 0.75,
+          "Partner": 0.25
+        }
+      },
+      {
+        "text": "Burn the rubble and start louder.",
+        "weights": {
+          "Rebel": 0.75,
+          "Spotlight": 0.25
+        }
+      }
+    ]
+  },
+  {
+    "question": "What keeps you awake at night most often?",
+    "options": [
+      {
+        "text": "Worry someone I love isn't protected.",
+        "weights": {
+          "Guardian": 0.25,
+          "Provider": 0.75
+        }
+      },
+      {
+        "text": "The silence after the applause ends.",
+        "weights": {
+          "Rebel": 0.25,
+          "Spotlight": 0.75
+        }
+      },
+      {
+        "text": "Visions that refuse to sleep.",
+        "weights": {
+          "Visionary": 0.25,
+          "Partner": 0.75
+        }
+      },
+      {
+        "text": "The weight of promises I made.",
+        "weights": {
+          "Servant": 0.25,
+          "Mask": 0.75
+        }
+      },
+      {
+        "text": "A riddle I can't yet decode.",
+        "weights": {
+          "Equalizer": 0.25,
+          "Seeker": 0.75
+        }
+      },
+      {
+        "text": "Feeling unmoored, like I could drift forever.",
+        "weights": {
+          "Sovereign": 0.25,
+          "Wanderer": 0.75
+        }
+      }
+    ]
+  },
+  {
+    "question": "You learn best when…",
+    "options": [
+      {
+        "text": "Thrown into command with real consequences.",
+        "weights": {
+          "Sovereign": 0.75,
+          "Wanderer": 0.25
+        }
+      },
+      {
+        "text": "Facing resistance loud enough to push back.",
+        "weights": {
+          "Rebel": 0.75,
+          "Spotlight": 0.25
+        }
+      },
+      {
+        "text": "Prototyping wild ideas against the clock.",
+        "weights": {
+          "Visionary": 0.75,
+          "Partner": 0.25
+        }
+      },
+      {
+        "text": "Building safe frameworks from the ground up.",
+        "weights": {
+          "Guardian": 0.75,
+          "Provider": 0.25
+        }
+      },
+      {
+        "text": "Left to break apart the system myself.",
+        "weights": {
+          "Equalizer": 0.75,
+          "Seeker": 0.25
+        }
+      },
+      {
+        "text": "Serving beside a master until skill sinks in.",
+        "weights": {
+          "Servant": 0.75,
+          "Mask": 0.25
+        }
+      }
+    ]
+  },
+  {
+    "question": "Final question: At the edge of everything, what remains?",
+    "options": [
+      {
+        "text": "My sovereignty, untamed.",
+        "weights": {
+          "Sovereign": 0.25,
+          "Wanderer": 0.75
+        }
+      },
+      {
+        "text": "A spark of revolt waiting to ignite.",
+        "weights": {
+          "Rebel": 0.25,
+          "Spotlight": 0.75
+        }
+      },
+      {
+        "text": "A vow to carry another's load.",
+        "weights": {
+          "Servant": 0.25,
+          "Mask": 0.75
+        }
+      },
+      {
+        "text": "A wall strong enough for the next to rest on.",
+        "weights": {
+          "Guardian": 0.25,
+          "Provider": 0.75
+        }
+      },
+      {
+        "text": "An impossible vision calling me forward.",
+        "weights": {
+          "Visionary": 0.25,
+          "Partner": 0.75
+        }
+      },
+      {
+        "text": "A riddle still worth solving.",
+        "weights": {
+          "Equalizer": 0.25,
+          "Seeker": 0.75
+        }
+      }
+    ]
+  },
+  {
+    "question": "What is your deepest truth?",
+    "options": [
+      {
+        "text": "I am free to choose my own path.",
+        "weights": {
+          "Sovereign": 0.75,
+          "Wanderer": 0.25
+        }
+      },
+      {
+        "text": "I see patterns others miss.",
+        "weights": {
+          "Equalizer": 0.75,
+          "Seeker": 0.25
+        }
+      },
+      {
+        "text": "I break what needs breaking.",
+        "weights": {
+          "Rebel": 0.75,
+          "Spotlight": 0.25
+        }
+      },
+      {
+        "text": "I serve what matters most.",
+        "weights": {
+          "Servant": 0.75,
+          "Mask": 0.25
+        }
+      },
+      {
+        "text": "I imagine what could be.",
+        "weights": {
+          "Visionary": 0.75,
+          "Partner": 0.25
+        }
+      },
+      {
+        "text": "I protect what I love.",
+        "weights": {
+          "Guardian": 0.75,
+          "Provider": 0.25
+        }
+      }
+    ]
+  }
+]

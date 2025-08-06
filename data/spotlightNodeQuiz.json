@@ -1,0 +1,298 @@
+{
+  "name": "Spotlight Node",
+  "description": "Discover your relationship to visibility, authenticity, and leadership",
+  "stages": [
+    {
+      "key": "hider",
+      "label": "The Hider",
+      "description": "Struggles to be seen, hides potential, fears judgment",
+      "questions": [
+        {
+          "id": "h1",
+          "text": "When you feel the spotlight on you, you…",
+          "options": [
+            { "text": "Use it to say what matters", "value": 5 },
+            { "text": "Wish it would just go away", "value": 1 },
+            { "text": "Endure it briefly, then escape", "value": 2 },
+            { "text": "Turn attention to someone else with a joke", "value": 3 },
+            { "text": "Try to look busy or small", "value": 4 }
+          ]
+        },
+        {
+          "id": "h2",
+          "text": "When your name is called in a group, you usually…",
+          "options": [
+            { "text": "Answer directly, but shift quickly", "value": 4 },
+            { "text": "Feel a jolt of panic", "value": 1 },
+            { "text": "Nod and return to silence", "value": 2 },
+            { "text": "Seize the moment to steer conversation", "value": 5 },
+            { "text": "Smile and make a light comment", "value": 3 }
+          ]
+        },
+        {
+          "id": "h3",
+          "text": "When you're complimented in public, your gut reaction is…",
+          "options": [
+            { "text": "Deflect with humor or self-critique", "value": 4 },
+            { "text": "Get tense or uncomfortable", "value": 1 },
+            { "text": "Quietly thank them and move on", "value": 2 },
+            { "text": "Embrace it, let it land", "value": 5 },
+            { "text": "Share credit or distract", "value": 3 }
+          ]
+        },
+        {
+          "id": "h4",
+          "text": "In a crowded room, you prefer to…",
+          "options": [
+            { "text": "Command the space when ready", "value": 5 },
+            { "text": "Find one person and connect", "value": 4 },
+            { "text": "Stay invisible until needed", "value": 1 },
+            { "text": "Stand at the edge and observe", "value": 2 },
+            { "text": "Make yourself blend in", "value": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mimic",
+      "label": "The Mimic",
+      "description": "Adapts, blends, or mirrors others to gain acceptance",
+      "questions": [
+        {
+          "id": "m1",
+          "text": "In a new setting, your instinct is to…",
+          "options": [
+            { "text": "Stay true to your style regardless", "value": 5 },
+            { "text": "Instantly match those around you", "value": 1 },
+            { "text": "Study and adopt what works", "value": 2 },
+            { "text": "Try a mix of blending and standing out", "value": 3 },
+            { "text": "Express yourself once you see the rules", "value": 4 }
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "When everyone is talking, you…",
+          "options": [
+            { "text": "Interject with your unique voice", "value": 5 },
+            { "text": "Stay quiet until you know your role", "value": 1 },
+            { "text": "Match the energy and style", "value": 2 },
+            { "text": "Wait for an opening, then contribute", "value": 3 },
+            { "text": "Adapt your tone to fit in", "value": 4 }
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "If someone challenges your opinion, you…",
+          "options": [
+            { "text": "Stand firm in your truth", "value": 5 },
+            { "text": "Quickly agree to avoid conflict", "value": 1 },
+            { "text": "Consider their point and adjust", "value": 2 },
+            { "text": "Find common ground", "value": 3 },
+            { "text": "Moderate your stance", "value": 4 }
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "When you're unsure about something, you…",
+          "options": [
+            { "text": "Ask directly for clarity", "value": 5 },
+            { "text": "Watch others and copy", "value": 1 },
+            { "text": "Wait to see what others do", "value": 2 },
+            { "text": "Ask someone you trust", "value": 3 },
+            { "text": "Figure it out quietly", "value": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "performer",
+      "label": "The Performer",
+      "description": "Leads with charm, reads the room, craves applause",
+      "questions": [
+        {
+          "id": "p1",
+          "text": "When you enter a room, you…",
+          "options": [
+            { "text": "Make a memorable entrance", "value": 5 },
+            { "text": "Slip in quietly", "value": 1 },
+            { "text": "Scan the room first", "value": 2 },
+            { "text": "Greet familiar faces", "value": 3 },
+            { "text": "Find your spot and settle", "value": 4 }
+          ]
+        },
+        {
+          "id": "p2",
+          "text": "In group discussions, you tend to…",
+          "options": [
+            { "text": "Take center stage when needed", "value": 5 },
+            { "text": "Listen more than speak", "value": 1 },
+            { "text": "Contribute when called on", "value": 2 },
+            { "text": "Share stories and examples", "value": 3 },
+            { "text": "Guide the conversation", "value": 4 }
+          ]
+        },
+        {
+          "id": "p3",
+          "text": "When you're the center of attention, you…",
+          "options": [
+            { "text": "Embrace it fully", "value": 5 },
+            { "text": "Feel uncomfortable", "value": 1 },
+            { "text": "Handle it professionally", "value": 2 },
+            { "text": "Use it to connect with others", "value": 3 },
+            { "text": "Share the spotlight", "value": 4 }
+          ]
+        },
+        {
+          "id": "p4",
+          "text": "If someone interrupts you, you…",
+          "options": [
+            { "text": "Assert your space", "value": 5 },
+            { "text": "Let them take over", "value": 1 },
+            { "text": "Wait for them to finish", "value": 2 },
+            { "text": "Find a way to continue", "value": 3 },
+            { "text": "Redirect the conversation", "value": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "amplifier",
+      "label": "The Amplifier",
+      "description": "Expands energy, inspires others, risks overreaching",
+      "questions": [
+        {
+          "id": "a1",
+          "text": "When you're passionate about something, you…",
+          "options": [
+            { "text": "Inspire others to join you", "value": 5 },
+            { "text": "Keep it to yourself", "value": 1 },
+            { "text": "Share with close friends", "value": 2 },
+            { "text": "Look for like-minded people", "value": 3 },
+            { "text": "Build momentum gradually", "value": 4 }
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "In leadership situations, you…",
+          "options": [
+            { "text": "Take charge and inspire", "value": 5 },
+            { "text": "Prefer to follow", "value": 1 },
+            { "text": "Step up when needed", "value": 2 },
+            { "text": "Support the leader", "value": 3 },
+            { "text": "Guide from behind", "value": 4 }
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "When you see potential in others, you…",
+          "options": [
+            { "text": "Push them to excel", "value": 5 },
+            { "text": "Let them find their own way", "value": 1 },
+            { "text": "Offer gentle encouragement", "value": 2 },
+            { "text": "Share your experience", "value": 3 },
+            { "text": "Create opportunities", "value": 4 }
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "If a project is failing, you…",
+          "options": [
+            { "text": "Rally everyone to turn it around", "value": 5 },
+            { "text": "Step back and let it fail", "value": 1 },
+            { "text": "Try to fix it quietly", "value": 2 },
+            { "text": "Ask for help", "value": 3 },
+            { "text": "Find a new approach", "value": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "luminary",
+      "label": "The Luminary",
+      "description": "Radiates truth, stands in authentic presence",
+      "questions": [
+        {
+          "id": "l1",
+          "text": "When you speak your truth, you…",
+          "options": [
+            { "text": "Stand in it completely", "value": 5 },
+            { "text": "Doubt yourself", "value": 1 },
+            { "text": "Qualify your statements", "value": 2 },
+            { "text": "Consider others' feelings", "value": 3 },
+            { "text": "Choose your words carefully", "value": 4 }
+          ]
+        },
+        {
+          "id": "l2",
+          "text": "In moments of conflict, you…",
+          "options": [
+            { "text": "Speak with clarity and compassion", "value": 5 },
+            { "text": "Avoid confrontation", "value": 1 },
+            { "text": "Try to mediate", "value": 2 },
+            { "text": "Find common ground", "value": 3 },
+            { "text": "Address issues directly", "value": 4 }
+          ]
+        },
+        {
+          "id": "l3",
+          "text": "When you're authentic, others…",
+          "options": [
+            { "text": "Are drawn to your presence", "value": 5 },
+            { "text": "Don't notice", "value": 1 },
+            { "text": "Appreciate your honesty", "value": 2 },
+            { "text": "Feel comfortable around you", "value": 3 },
+            { "text": "Follow your example", "value": 4 }
+          ]
+        },
+        {
+          "id": "l4",
+          "text": "Your presence in a room is…",
+          "options": [
+            { "text": "Transformative", "value": 5 },
+            { "text": "Unnoticed", "value": 1 },
+            { "text": "Welcoming", "value": 2 },
+            { "text": "Stabilizing", "value": 3 },
+            { "text": "Inspiring", "value": 4 }
+          ]
+        }
+      ]
+    }
+  ],
+  "diagnosis": {
+    "hider": {
+      "hider": "The Hidden One | Mask: The Hidden One",
+      "mimic": "The Hidden One | Mask: The Mimic",
+      "performer": "The Hidden One | Mask: The Performer",
+      "amplifier": "The Hidden One | Mask: The Amplifier",
+      "luminary": "The Hidden One | Mask: The Luminary"
+    },
+    "mimic": {
+      "hider": "The Mimic | Mask: The Hidden One",
+      "mimic": "The Mimic | Mask: The Mimic",
+      "performer": "The Mimic | Mask: The Performer",
+      "amplifier": "The Mimic | Mask: The Amplifier",
+      "luminary": "The Mimic | Mask: The Luminary"
+    },
+    "performer": {
+      "hider": "The Performer | Mask: The Hidden One",
+      "mimic": "The Performer | Mask: The Mimic",
+      "performer": "The Performer | Mask: The Performer",
+      "amplifier": "The Performer | Mask: The Amplifier",
+      "luminary": "The Performer | Mask: The Luminary"
+    },
+    "amplifier": {
+      "hider": "The Amplifier | Mask: The Hidden One",
+      "mimic": "The Amplifier | Mask: The Mimic",
+      "performer": "The Amplifier | Mask: The Performer",
+      "amplifier": "The Amplifier | Mask: The Amplifier",
+      "luminary": "The Amplifier | Mask: The Luminary"
+    },
+    "luminary": {
+      "hider": "The Luminary | Mask: The Hidden One",
+      "mimic": "The Luminary | Mask: The Mimic",
+      "performer": "The Luminary | Mask: The Performer",
+      "amplifier": "The Luminary | Mask: The Amplifier",
+      "luminary": "The Luminary | Mask: The Luminary"
+    }
+  }
+} 

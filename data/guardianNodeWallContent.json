@@ -1,0 +1,89 @@
+{
+  "guardianNodeWall": {
+    "wall_wall": {
+      "title": "GUARDIAN NODE: WALL | WALL",
+      "currentState": "You are living as the Wall, and when things get hard, your fallback is also the Wall. This is the definition of lockdown mode. Every challenge, every threat—real or imagined—is met with maximum defense. You absorb impact for yourself and everyone around you. You are always on guard.",
+      "maskDescription": "Whenever your main Wall strategy is tested—if a crisis overwhelms you, or if you start to doubt yourself—your instinct is not to adapt, but to double down. You become even more impenetrable, less flexible, less willing to compromise. When you feel pain or fear, you just build the wall higher. The danger of this mask is that you no longer know the difference between self-protection and self-destruction. You become numb, rigid, and isolated. Your strength turns into your prison.",
+      "coreIssue": "This Wall | Wall pattern creates a feedback loop of exhaustion and loneliness. Every new difficulty causes you to pull back even more, shrinking your world. You tell yourself you're strong because you can withstand anything, but you're actually becoming weaker—less connected, less adaptable, less alive.",
+      "trueNeed": "You need to learn that strength comes from flexibility, not rigidity. The wall that protects you is also the wall that imprisons you. You must learn to open gates in your wall, to let in help, to trust others, and to adapt when circumstances change.",
+      "warning": "If you remain in this Wall | Wall pattern, you will become increasingly isolated and ineffective. Your world will shrink until you're alone in a fortress of your own making. You'll lose the very people and opportunities you're trying to protect.",
+      "transformation": "When you begin to open gates in your wall, you transform from a rigid barrier into a living boundary. You become a Defender who can protect while also adapting and growing. You learn that true strength comes from connection, not isolation.",
+      "ritualFocus": "Daily practices to build flexibility, trust, and connection while maintaining healthy boundaries.",
+      "nextStage": "Gate",
+      "progressPath": "Begin by opening one small gate each day. Practice letting in help, sharing your struggles, and trusting others to support you."
+    },
+    "wall_defender": {
+      "title": "GUARDIAN NODE: WALL | DEFENDER",
+      "currentState": "You operate as the Wall, but your fallback mask is Defender. This means you are always braced for the worst, but when that's not enough, you jump straight into 'damage control' mode. You spend your life preparing for impact and then cleaning up after it.",
+      "maskDescription": "When your wall is breached or threatened, you don't collapse. Instead, you swing into action, patching holes, fixing what broke, and cleaning up after others. You become the person everyone depends on to make things right again.",
+      "coreIssue": "You're always working—either to hold the wall or to fix what got through it. This creates a cycle of constant vigilance and repair that leaves you exhausted and prevents you from building anything new or meaningful.",
+      "trueNeed": "You need to learn that not every threat requires maximum defense, and not every breach requires immediate repair. You must develop discernment about what truly needs protection and what can be allowed to flow naturally.",
+      "warning": "If you continue this pattern, you'll become a perpetual repair person, always fixing but never building. You'll lose the ability to create and innovate because you're too busy defending and repairing.",
+      "transformation": "When you learn to choose your battles wisely, you transform from a reactive defender into a strategic protector. You become someone who can both defend and create, who can protect while also allowing growth and change.",
+      "ritualFocus": "Strategic thinking practices, discernment work, and learning to distinguish between real threats and normal challenges.",
+      "nextStage": "Gate",
+      "progressPath": "Practice pausing before reacting. Ask yourself if this threat truly requires maximum defense or if it's just a normal challenge that can be handled with flexibility."
+    },
+    "wall_keeper": {
+      "title": "GUARDIAN NODE: WALL | KEEPER",
+      "currentState": "You operate primarily as the Wall—impenetrable, defensive, all about holding the line—but your fallback is Keeper. This means that when your defenses are threatened, you default to preservation mode: you become focused on maintaining what you have rather than adapting to what's coming.",
+      "maskDescription": "The Keeper mask is about saving, storing, and preventing loss. When your walls aren't enough, you obsess over details, stockpile resources (physical, emotional, or informational), and try to control every variable. You think, 'If I can just manage everything perfectly, nothing will be lost.'",
+      "coreIssue": "You become so focused on preserving what you have that you miss opportunities for growth and expansion. Your world becomes smaller as you try to protect everything within your walls, but you lose the ability to adapt to changing circumstances.",
+      "trueNeed": "You need to learn that growth requires some risk and some loss. You must develop the ability to let go of what's no longer serving you and to embrace new possibilities, even if they seem uncertain.",
+      "warning": "If you remain in this pattern, you'll become increasingly rigid and isolated. Your focus on preservation will prevent you from evolving and adapting, leaving you behind as the world changes around you.",
+      "transformation": "When you learn to balance preservation with growth, you transform from a rigid keeper into a wise steward. You become someone who can protect what's valuable while also allowing for necessary change and evolution.",
+      "ritualFocus": "Letting go practices, growth mindset work, and learning to balance preservation with evolution.",
+      "nextStage": "Gate",
+      "progressPath": "Practice letting go of one small thing each day. Start with minor possessions or habits, then work up to larger patterns and beliefs."
+    },
+    "wall_sentinel": {
+      "title": "GUARDIAN NODE: WALL | SENTINEL",
+      "currentState": "You lead as the Wall but, under stress, your fallback is Sentinel. You're highly defensive, but your instinct, when tested, is to become a constant watchman: always scanning, always monitoring, always on the lookout for threats.",
+      "maskDescription": "When your wall is threatened, you don't just defend—you become hyper-vigilant. You scan the horizon for any potential threat, monitor every detail, and warn others about possible dangers. You become the person who sees trouble coming before anyone else.",
+      "coreIssue": "Your constant vigilance becomes exhausting and can create paranoia. You see threats everywhere, even when they don't exist, and your warnings can become overwhelming to others. You lose the ability to relax and enjoy life.",
+      "trueNeed": "You need to learn to distinguish between real threats and imagined ones. You must develop the ability to relax your vigilance when it's safe to do so and to trust that not everything requires maximum alertness.",
+      "warning": "If you continue this pattern, you'll become increasingly anxious and isolated. Your constant warnings will push people away, and your hyper-vigilance will prevent you from experiencing joy and connection.",
+      "transformation": "When you learn to balance vigilance with trust, you transform from a paranoid sentinel into a wise guardian. You become someone who can protect without being consumed by fear.",
+      "ritualFocus": "Anxiety management, trust building, and learning to distinguish between real and imagined threats.",
+      "nextStage": "Gate",
+      "progressPath": "Practice relaxing your vigilance for short periods each day. Start with 5 minutes of letting go, then gradually increase the time."
+    },
+    "wall_anchor": {
+      "title": "GUARDIAN NODE: WALL | ANCHOR",
+      "currentState": "Your main mode is Wall—total defense, always prepared for impact. But when that fails or you hit your breaking point, you slip into Anchor. That means instead of just holding the line, you dig in and refuse to budge under any circumstances.",
+      "maskDescription": "Wall | Anchor is a state of complete standstill. Whenever you feel threatened, you dig in deeper, fortify your position, and refuse to adapt. This creates a feedback loop where you become more rigid over time, less able to respond to changing circumstances.",
+      "coreIssue": "You become so focused on maintaining your position that you lose the ability to move forward or adapt. Your strength becomes your weakness as you become increasingly rigid and unresponsive to the needs of others and the demands of life.",
+      "trueNeed": "You need to learn that true strength comes from the ability to adapt and grow, not just from the ability to hold your ground. You must develop flexibility while maintaining your core values and boundaries.",
+      "warning": "If you remain in this pattern, you'll become increasingly isolated and ineffective. Your rigidity will prevent you from building meaningful relationships or achieving your goals.",
+      "transformation": "When you learn to balance stability with flexibility, you transform from a rigid anchor into a living foundation. You become someone who can provide stability while also adapting to changing circumstances.",
+      "ritualFocus": "Flexibility practices, adaptability work, and learning to balance stability with growth.",
+      "nextStage": "Gate",
+      "progressPath": "Practice small acts of flexibility each day. Start with minor changes in routine, then work up to larger adaptations."
+    }
+  },
+  "wallRituals": {
+    "gateOpening": {
+      "title": "WALL MASK RITUAL: The Gate Opening",
+      "description": "A daily practice to transform your wall into a living boundary with gates that can open and close as needed.",
+      "steps": [
+        "Stand at a doorway or threshold",
+        "Place your hands on the doorframe",
+        "Take three deep breaths",
+        "Say: 'I am not a wall. The world is welcome.'",
+        "Step through the doorway with intention",
+        "Repeat this ritual daily to build flexibility"
+      ]
+    },
+    "flexibilityPractice": {
+      "title": "WALL MASK: Rituals for Breaking Rigidity",
+      "description": "Daily practices to develop flexibility while maintaining healthy boundaries.",
+      "steps": [
+        "Touch doorframe and whisper: 'My wall opens, my voice enters the world.'",
+        "Practice saying 'yes' to one small request each day",
+        "Allow yourself to be helped by others",
+        "Share one vulnerability with someone you trust",
+        "Practice adapting to unexpected changes"
+      ]
+    }
+  }
+} 

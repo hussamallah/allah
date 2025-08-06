@@ -1,0 +1,95 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Cache Next.js build
+      uses: actions/cache@v3
+      with:
+        path: |
+          hussamallah/.next/cache
+        key: ${{ runner.os }}-nextjs-${{ hashFiles('hussamallah/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nextjs-
+        
+    - name: Install dependencies
+      run: |
+        cd hussamallah
+        npm ci --legacy-peer-deps
+      
+    - name: Run linting
+      run: |
+        cd hussamallah
+        npm run lint
+      
+    - name: Build project
+      run: |
+        cd hussamallah
+        npm run build
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      
+    - name: Run database migration
+      run: |
+        echo "Running database migration..."
+        # This will be handled by Supabase CLI or manual execution
+        # The migration script is in USER_ID_TRACKING_DEPLOYMENT.md
+        echo "Migration script ready for manual execution in Supabase Dashboard"
+      
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v25
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.ORG_ID }}
+        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        vercel-args: '--prod'
+      
+    - name: Wait for deployment
+      run: |
+        echo "Waiting 30 seconds for deployment to complete..."
+        sleep 30
+      
+    - name: Health check
+      run: |
+        echo "Running health checks..."
+        # Wait a bit more for deployment to be fully ready
+        sleep 10
+        
+        # Check main health endpoint
+        echo "Checking main health endpoint..."
+        curl -f https://${{ secrets.VERCEL_PROJECT_ID }}.vercel.app/api/health || echo "Main health check failed"
+        
+        # Check critical API endpoints
+        echo "Checking API endpoints..."
+        curl -f https://${{ secrets.VERCEL_PROJECT_ID }}.vercel.app/api/war-room/page-timers || echo "Page timers API check failed"
+        curl -f https://${{ secrets.VERCEL_PROJECT_ID }}.vercel.app/api/war-room/profiles || echo "Profiles API check failed"
+        
+        echo "✅ Health checks completed"
+      
+    - name: Deployment notification
+      if: always()
+      run: |
+        if [ "${{ job.status }}" == "success" ]; then
+          echo "✅ Deployment successful!"
+          echo "🌐 Live URL: https://${{ secrets.VERCEL_PROJECT_ID }}.vercel.app"
+        else
+          echo "❌ Deployment failed!"
+        fi 

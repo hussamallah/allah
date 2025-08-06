@@ -1,0 +1,335 @@
+{
+  "archetype": "Partner",
+  "stages": [
+    {
+      "name": "Bond Seeker",
+      "key": "bond_seeker",
+      "questions": [
+        {
+          "id": "p_bs_1",
+          "question": "When you meet someone new, you…",
+          "options": [
+            { "text": "Avoid attention, hope to go unnoticed", "value": 1 },
+            { "text": "Wait for them to approach, staying cautious", "value": 2 },
+            { "text": "Look for common ground or make small talk", "value": 3 },
+            { "text": "Initiate warm connection, instantly tuning to their vibe", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_bs_2",
+          "question": "If your friend is upset, you…",
+          "options": [
+            { "text": "Stay distant, hope they get over it", "value": 1 },
+            { "text": "Offer advice or try to \"fix\" their mood", "value": 2 },
+            { "text": "Drop everything to comfort them, even if it costs you", "value": 3 },
+            { "text": "Tune into their emotion, support them with presence, not words", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_bs_3",
+          "question": "When alone for long, you…",
+          "options": [
+            { "text": "Worry about being left out or forgotten", "value": 1 },
+            { "text": "Distract yourself to avoid loneliness", "value": 2 },
+            { "text": "Call someone, even if it feels forced", "value": 3 },
+            { "text": "Settle deeply, but reach out when you want true resonance", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_bs_4",
+          "question": "When sensing tension in a group, you…",
+          "options": [
+            { "text": "Freeze or withdraw", "value": 1 },
+            { "text": "Ignore it, hoping it'll pass", "value": 2 },
+            { "text": "Try to \"fix it\" or joke it away", "value": 3 },
+            { "text": "Calmly read the vibe, act to realign everyone", "value": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mirror Walker",
+      "key": "mirror_walker",
+      "questions": [
+        {
+          "id": "p_mw_1",
+          "question": "In conversation, you mostly…",
+          "options": [
+            { "text": "Feel blank if you're not mirrored", "value": 1 },
+            { "text": "Echo what others say, to belong", "value": 2 },
+            { "text": "Shift views to match the group", "value": 3 },
+            { "text": "Hold your truth while reflecting others", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_mw_2",
+          "question": "If someone is angry at you, you…",
+          "options": [
+            { "text": "Get confused or go silent", "value": 1 },
+            { "text": "Apologize, even if you're not sure why", "value": 2 },
+            { "text": "Adjust your energy to calm them", "value": 3 },
+            { "text": "Listen deeply, but maintain your ground", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_mw_3",
+          "question": "In a group, you…",
+          "options": [
+            { "text": "Fade into the background", "value": 1 },
+            { "text": "Match the group's energy or language", "value": 2 },
+            { "text": "Mediate, even if it's not your conflict", "value": 3 },
+            { "text": "Anchor your field, invite harmony without losing self", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_mw_4",
+          "question": "When you notice you're \"copying\" someone, you…",
+          "options": [
+            { "text": "Ignore it, hope it passes", "value": 1 },
+            { "text": "Worry you have no self", "value": 2 },
+            { "text": "Try to change, but struggle", "value": 3 },
+            { "text": "Use it consciously as a tool for connection", "value": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pulse Holder",
+      "key": "pulse_holder",
+      "questions": [
+        {
+          "id": "p_ph_1",
+          "question": "When friends argue, you…",
+          "options": [
+            { "text": "Feel drained or leave", "value": 1 },
+            { "text": "Stay until it calms, even if it exhausts you", "value": 2 },
+            { "text": "Intervene, absorb tension, try to help", "value": 3 },
+            { "text": "Center yourself, then draw everyone back to stability", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_ph_2",
+          "question": "In chaotic rooms, you…",
+          "options": [
+            { "text": "Wait for someone else to \"fix\" things", "value": 1 },
+            { "text": "Become quiet, absorb noise", "value": 2 },
+            { "text": "Try to set a new mood", "value": 3 },
+            { "text": "Shift the whole energy, re-pattern the group", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_ph_3",
+          "question": "When a friend's mood changes, you…",
+          "options": [
+            { "text": "Get confused or overwhelmed", "value": 1 },
+            { "text": "Mirror their emotion unconsciously", "value": 2 },
+            { "text": "Notice, but keep your own balance", "value": 3 },
+            { "text": "Sense the shift, stabilize both yourself and them", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_ph_4",
+          "question": "After social events, you…",
+          "options": [
+            { "text": "Feel empty or lost", "value": 1 },
+            { "text": "Replay others' feelings, lose track of your own", "value": 2 },
+            { "text": "Need time alone to reset", "value": 3 },
+            { "text": "Log what shifted, prepare to realign next time", "value": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Harmony Setter",
+      "key": "harmony_setter",
+      "questions": [
+        {
+          "id": "p_hs_1",
+          "question": "When conflict erupts, you…",
+          "options": [
+            { "text": "Withdraw or go numb", "value": 1 },
+            { "text": "Settle others but ignore yourself", "value": 2 },
+            { "text": "Use presence to diffuse, keep the group stable", "value": 3 },
+            { "text": "Step in, direct everyone to a new balance", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_hs_2",
+          "question": "If someone manipulates the group, you…",
+          "options": [
+            { "text": "Avoid getting involved", "value": 1 },
+            { "text": "Subtly adjust things, hope it resolves", "value": 2 },
+            { "text": "Address it quietly, realign the dynamic", "value": 3 },
+            { "text": "Name it, restore full harmony, set new rules if needed", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_hs_3",
+          "question": "Your friends say you…",
+          "options": [
+            { "text": "Are often missing or quiet", "value": 1 },
+            { "text": "Smooth drama, but stay out of sight", "value": 2 },
+            { "text": "Bring people together, mediate often", "value": 3 },
+            { "text": "Are the \"core\" that holds everyone steady", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_hs_4",
+          "question": "When harmony is lost, you…",
+          "options": [
+            { "text": "Escape or freeze", "value": 1 },
+            { "text": "Wait it out, hope for resolution", "value": 2 },
+            { "text": "Take charge, even at cost to self", "value": 3 },
+            { "text": "Sacrifice comfort, but always create restoration", "value": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Synchronizer",
+      "key": "synchronizer",
+      "questions": [
+        {
+          "id": "p_sync_1",
+          "question": "When you arrive, people…",
+          "options": [
+            { "text": "Barely notice", "value": 1 },
+            { "text": "Relax, but only if you engage", "value": 2 },
+            { "text": "Gravitate toward you, feel seen", "value": 3 },
+            { "text": "Instantly sync or change, group shifts around you", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_sync_2",
+          "question": "In nature or crowds, you…",
+          "options": [
+            { "text": "Feel out of place", "value": 1 },
+            { "text": "Observe, but don't influence", "value": 2 },
+            { "text": "Notice small changes, slight sync", "value": 3 },
+            { "text": "Witness animals, luck, or people \"tune\" to your presence", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_sync_3",
+          "question": "When someone loses themselves, you…",
+          "options": [
+            { "text": "Stay distant, not your job", "value": 1 },
+            { "text": "Try to help, but feel drained", "value": 2 },
+            { "text": "Stabilize them by syncing your energy", "value": 3 },
+            { "text": "Re-align their core with a word or gesture", "value": 4 }
+          ]
+        },
+        {
+          "id": "p_sync_4",
+          "question": "At your peak, you…",
+          "options": [
+            { "text": "Feel unnoticed or invisible", "value": 1 },
+            { "text": "Calm things, but only for a while", "value": 2 },
+            { "text": "Align chaos, make the group whole", "value": 3 },
+            { "text": "Can tune any system—people, events, even field phenomena—with presence alone", "value": 4 }
+          ]
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "maxPerStage": 16,
+    "progressLevels": {
+      "stuck": { "min": 0, "max": 9 },
+      "progressing": { "min": 10, "max": 13 },
+      "passed": { "min": 14, "max": 16 }
+    }
+  },
+  "diagnosis": {
+    "bond_seeker": {
+      "mirror_walker": {
+        "title": "Bond Seeker / Mirror Walker",
+        "diagnosis": "You crave connection but lose your core in others' reflection. Your need for belonging makes you too adaptable—practice holding your own field, not just merging."
+      },
+      "pulse_holder": {
+        "title": "Bond Seeker / Pulse Holder",
+        "diagnosis": "You seek connection but absorb too much tension. Learn to stabilize without losing yourself—hold your center while holding others."
+      },
+      "harmony_setter": {
+        "title": "Bond Seeker / Harmony Setter",
+        "diagnosis": "You want to belong but avoid setting the tone. Step into leadership—create the harmony you seek, don't just wait for it."
+      },
+      "synchronizer": {
+        "title": "Bond Seeker / Synchronizer",
+        "diagnosis": "You seek connection but haven't claimed your full presence. When you dare to lead harmony, others will follow—even events will tune to your rhythm."
+      }
+    },
+    "mirror_walker": {
+      "bond_seeker": {
+        "title": "Mirror Walker / Bond Seeker",
+        "diagnosis": "You reflect others well but struggle to initiate connection. Practice reaching out first—don't wait for others to approach you."
+      },
+      "pulse_holder": {
+        "title": "Mirror Walker / Pulse Holder",
+        "diagnosis": "You mirror others but absorb their tension. Learn to reflect without absorbing—hold your own energy while supporting theirs."
+      },
+      "harmony_setter": {
+        "title": "Mirror Walker / Harmony Setter",
+        "diagnosis": "You adapt to others but avoid directing harmony. Claim your right to set the tone—don't just reflect, lead."
+      },
+      "synchronizer": {
+        "title": "Mirror Walker / Synchronizer",
+        "diagnosis": "You reflect others but haven't claimed your full presence. When you dare to lead harmony, others will follow—even events will tune to your rhythm."
+      }
+    },
+    "pulse_holder": {
+      "bond_seeker": {
+        "title": "Pulse Holder / Bond Seeker",
+        "diagnosis": "You hold group energy but struggle to initiate connection. Practice reaching out—don't just stabilize, connect."
+      },
+      "mirror_walker": {
+        "title": "Pulse Holder / Mirror Walker",
+        "diagnosis": "You stabilize groups but lose yourself in reflection. Hold your own field while supporting others—don't just mirror, anchor."
+      },
+      "harmony_setter": {
+        "title": "Pulse Holder / Harmony Setter",
+        "diagnosis": "You absorb group tension but hesitate to set the tone. You stabilize but avoid true leadership—claim your right to direct harmony, not just hold it."
+      },
+      "synchronizer": {
+        "title": "Pulse Holder / Synchronizer",
+        "diagnosis": "You hold group energy but haven't claimed your full presence. When you dare to lead harmony, others will follow—even events will tune to your rhythm."
+      }
+    },
+    "harmony_setter": {
+      "bond_seeker": {
+        "title": "Harmony Setter / Bond Seeker",
+        "diagnosis": "You're the calm in every storm, but rarely let yourself belong. Step fully into the group—direct, don't just rescue."
+      },
+      "mirror_walker": {
+        "title": "Harmony Setter / Mirror Walker",
+        "diagnosis": "You set harmony but lose yourself in others' reflection. Lead with your own truth—don't just adapt, direct."
+      },
+      "pulse_holder": {
+        "title": "Harmony Setter / Pulse Holder",
+        "diagnosis": "You create harmony but absorb too much tension. Learn to direct without absorbing—lead from your center."
+      },
+      "synchronizer": {
+        "title": "Harmony Setter / Synchronizer",
+        "diagnosis": "You set harmony but haven't claimed your full presence. When you dare to lead harmony, others will follow—even events will tune to your rhythm."
+      }
+    },
+    "synchronizer": {
+      "bond_seeker": {
+        "title": "Synchronizer / Bond Seeker",
+        "diagnosis": "You are the axis of alignment. Others harmonize in your presence. Wherever you still hold back, walk forward—your field sets the tempo now."
+      },
+      "mirror_walker": {
+        "title": "Synchronizer / Mirror Walker",
+        "diagnosis": "You are the axis of alignment. Others harmonize in your presence. Wherever you still hold back, walk forward—your field sets the tempo now."
+      },
+      "pulse_holder": {
+        "title": "Synchronizer / Pulse Holder",
+        "diagnosis": "You are the axis of alignment. Others harmonize in your presence. Wherever you still hold back, walk forward—your field sets the tempo now."
+      },
+      "harmony_setter": {
+        "title": "Synchronizer / Harmony Setter",
+        "diagnosis": "You are the axis of alignment. Others harmonize in your presence. Wherever you still hold back, walk forward—your field sets the tempo now."
+      }
+    }
+  }
+} 

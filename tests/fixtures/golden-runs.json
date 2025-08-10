@@ -1,0 +1,94 @@
+{
+  "all-a-path": {
+    "description": "Always picks first option (A1-leaning), should result in stable A1 dominance",
+    "expected": {
+      "finalArchetype": "Sovereign",
+      "altArchetype": "Guardian",
+      "flips": 0,
+      "state": "stable",
+      "triggerCounts": {
+        "Control": 3,
+        "Rejection": 0,
+        "Shame": 0,
+        "Overwhelm": 2,
+        "Neglect": 2,
+        "Uncertainty": 1,
+        "Invisibility": 0
+      },
+      "rIndex": {
+        "min": 0,
+        "max": 70
+      },
+      "delivery": "V1"
+    }
+  },
+  "flip-mid-run": {
+    "description": "Phase A picks alt-leaning, Phase B picks pure A2 when volatile, should trigger flip",
+    "expected": {
+      "finalArchetype": "Sovereign",
+      "altArchetype": "Guardian",
+      "flips": 0,
+      "state": "volatile",
+      "triggerCounts": {
+        "Control": 0,
+        "Rejection": 0,
+        "Shame": 0,
+        "Overwhelm": 0,
+        "Neglect": 0,
+        "Uncertainty": 0,
+        "Invisibility": 0
+      },
+      "rIndex": {
+        "min": 0,
+        "max": 50
+      },
+      "delivery": "V1"
+    }
+  },
+  "high-r-imprinter": {
+    "description": "Always picks highest rWeight options with clean behavior, should result in high R-index",
+    "expected": {
+      "finalArchetype": "Equalizer",
+      "altArchetype": "Partner",
+      "flips": 2,
+      "state": "stable",
+      "triggerCounts": {
+        "Control": 4,
+        "Rejection": 2,
+        "Shame": 1,
+        "Overwhelm": 0,
+        "Neglect": 1,
+        "Uncertainty": 0,
+        "Invisibility": 0
+      },
+      "rIndex": {
+        "min": 70,
+        "max": 100
+      },
+      "delivery": "V2"
+    }
+  },
+  "low-r-literalist": {
+    "description": "Always picks lowest rWeight options with hesitant behavior, should result in low R-index",
+    "expected": {
+      "finalArchetype": "Equalizer",
+      "altArchetype": "Partner",
+      "flips": 0,
+      "state": "stable",
+      "triggerCounts": {
+        "Control": 4,
+        "Rejection": 0,
+        "Shame": 0,
+        "Overwhelm": 2,
+        "Neglect": 1,
+        "Uncertainty": 1,
+        "Invisibility": 0
+      },
+      "rIndex": {
+        "min": 0,
+        "max": 50
+      },
+      "delivery": "V1"
+    }
+  }
+}

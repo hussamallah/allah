@@ -39,6 +39,12 @@ jobs:
         cd hussamallah
         npm run lint
       
+    - name: Run simulation tests
+      run: |
+        cd hussamallah
+        npm run quiz:sim
+        npm run quiz:test
+      
     - name: Build project
       run: |
         cd hussamallah

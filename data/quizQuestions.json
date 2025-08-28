@@ -611,53 +611,6 @@
     ]
   },
   {
-    "question": "Final question: At the edge of everything, what remains?",
-    "options": [
-      {
-        "text": "My sovereignty, untamed.",
-        "weights": {
-          "Sovereign": 0.25,
-          "Wanderer": 0.75
-        }
-      },
-      {
-        "text": "A spark of revolt waiting to ignite.",
-        "weights": {
-          "Rebel": 0.25,
-          "Spotlight": 0.75
-        }
-      },
-      {
-        "text": "A vow to carry another's load.",
-        "weights": {
-          "Servant": 0.25,
-          "Mask": 0.75
-        }
-      },
-      {
-        "text": "A wall strong enough for the next to rest on.",
-        "weights": {
-          "Guardian": 0.25,
-          "Provider": 0.75
-        }
-      },
-      {
-        "text": "An impossible vision calling me forward.",
-        "weights": {
-          "Visionary": 0.25,
-          "Partner": 0.75
-        }
-      },
-      {
-        "text": "A riddle still worth solving.",
-        "weights": {
-          "Equalizer": 0.25,
-          "Seeker": 0.75
-        }
-      }
-    ]
-  },
-  {
     "question": "What is your deepest truth?",
     "options": [
       {
@@ -700,6 +653,53 @@
         "weights": {
           "Guardian": 0.75,
           "Provider": 0.25
+        }
+      }
+    ]
+  },
+  {
+    "question": "Final question: At the edge of everything, what remains?",
+    "options": [
+      {
+        "text": "My sovereignty, untamed.",
+        "weights": {
+          "Sovereign": 0.25,
+          "Wanderer": 0.75
+        }
+      },
+      {
+        "text": "A spark of revolt waiting to ignite.",
+        "weights": {
+          "Rebel": 0.25,
+          "Spotlight": 0.75
+        }
+      },
+      {
+        "text": "A vow to carry another's load.",
+        "weights": {
+          "Servant": 0.25,
+          "Mask": 0.75
+        }
+      },
+      {
+        "text": "A wall strong enough for the next to rest on.",
+        "weights": {
+          "Guardian": 0.25,
+          "Provider": 0.75
+        }
+      },
+      {
+        "text": "An impossible vision calling me forward.",
+        "weights": {
+          "Visionary": 0.25,
+          "Partner": 0.75
+        }
+      },
+      {
+        "text": "A riddle still worth solving.",
+        "weights": {
+          "Equalizer": 0.25,
+          "Seeker": 0.75
         }
       }
     ]

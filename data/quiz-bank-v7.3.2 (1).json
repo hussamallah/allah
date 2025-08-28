@@ -1,0 +1,2404 @@
+{
+  "version": "quiz-bank-v7.3.2",
+  "families": [
+    "Control",
+    "Pace",
+    "Boundary",
+    "Truth",
+    "Recognition",
+    "Bonding",
+    "Stress"
+  ],
+  "items": [
+    {
+      "id": "FH_Q0",
+      "prompt": "You have 5 minutes before a call that decides your next 3 months (job, contract, or housing). Nothing is ready. What do you do first?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Do a tiny check to see what matters most.",
+          "family": "Truth"
+        },
+        {
+          "id": "B",
+          "label": "Make one clear call and start.",
+          "family": "Control"
+        },
+        {
+          "id": "C",
+          "label": "Decide what's in and what's out for the next 10 minutes.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Take a small step you can change later.",
+          "family": "Pace"
+        },
+        {
+          "id": "E",
+          "label": "Say it in a way people can hear right now.",
+          "family": "Recognition"
+        },
+        {
+          "id": "F",
+          "label": "Steady the person who's struggling so the group can move.",
+          "family": "Bonding"
+        },
+        {
+          "id": "G",
+          "label": "Change the setting to break the jam.",
+          "family": "Stress"
+        }
+      ]
+    },
+    {
+      "id": "FH_A1",
+      "prompt": "When nothing is moving, what do you do first?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Make a clear call and go.",
+          "family": "Control"
+        },
+        {
+          "id": "B",
+          "label": "Take a small step you can change later.",
+          "family": "Pace"
+        },
+        {
+          "id": "C",
+          "label": "Sort what matters and set an order.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Do a tiny check to see what's true.",
+          "family": "Truth"
+        },
+        {
+          "id": "E",
+          "label": "Say it in a way people can hear.",
+          "family": "Recognition"
+        }
+      ]
+    },
+    {
+      "id": "FH_A2",
+      "prompt": "Under pressure, the opener that works for you is…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Start a visible first step.",
+          "family": "Pace"
+        },
+        {
+          "id": "B",
+          "label": "Calm people so they can talk.",
+          "family": "Stress"
+        },
+        {
+          "id": "C",
+          "label": "Pick up some load so things keep moving.",
+          "family": "Bonding"
+        },
+        {
+          "id": "D",
+          "label": "Point to the next near goal.",
+          "family": "Control"
+        },
+        {
+          "id": "E",
+          "label": "Let the work speak; keep going.",
+          "family": "Recognition"
+        }
+      ]
+    },
+    {
+      "id": "FH_A3",
+      "prompt": "When things are messy, you tend to…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Run a tiny test to find signal.",
+          "family": "Truth"
+        },
+        {
+          "id": "B",
+          "label": "Keep things fair and steady for everyone.",
+          "family": "Boundary"
+        },
+        {
+          "id": "C",
+          "label": "Adjust how you say it so it lands.",
+          "family": "Recognition"
+        },
+        {
+          "id": "D",
+          "label": "Line people up so they stop colliding.",
+          "family": "Control"
+        },
+        {
+          "id": "E",
+          "label": "Start small and change as you go.",
+          "family": "Pace"
+        }
+      ]
+    },
+    {
+      "id": "FH_A4",
+      "prompt": "Someone asks for something that isn't in your plan or schedule. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Use the same rules; put it on the schedule.",
+          "family": "Boundary"
+        },
+        {
+          "id": "B",
+          "label": "Use the moment to set a clear direction.",
+          "family": "Control"
+        },
+        {
+          "id": "C",
+          "label": "Offer a small step you can change later.",
+          "family": "Pace"
+        },
+        {
+          "id": "D",
+          "label": "Run a 2-minute check; show the result.",
+          "family": "Truth"
+        },
+        {
+          "id": "E",
+          "label": "Say it in the way they’ll accept right now.",
+          "family": "Recognition"
+        }
+      ]
+    },
+    {
+      "id": "FH_A5",
+      "prompt": "Your plan goes against a relationship. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Say what's in the way; pick a clear path.",
+          "family": "Truth"
+        },
+        {
+          "id": "B",
+          "label": "Work it out together.",
+          "family": "Bonding"
+        },
+        {
+          "id": "C",
+          "label": "Keep things fair for the flow.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Place a small stake you can change now.",
+          "family": "Pace"
+        },
+        {
+          "id": "E",
+          "label": "Decide and set a simple rule.",
+          "family": "Control"
+        }
+      ]
+    },
+    {
+      "id": "FH_A6",
+      "prompt": "A rule is blocking progress. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Replace it with something simpler.",
+          "family": "Control"
+        },
+        {
+          "id": "B",
+          "label": "Apply the rule evenly and write it down.",
+          "family": "Boundary"
+        },
+        {
+          "id": "C",
+          "label": "Build around it to show a path.",
+          "family": "Pace"
+        },
+        {
+          "id": "D",
+          "label": "Test the rule and keep what works.",
+          "family": "Truth"
+        },
+        {
+          "id": "E",
+          "label": "Change the setting once to break the jam.",
+          "family": "Stress"
+        }
+      ]
+    },
+    {
+      "id": "FH_A7",
+      "prompt": "People say different things about the same issue. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Do a 2-minute test to collapse the disagreement.",
+          "family": "Truth"
+        },
+        {
+          "id": "B",
+          "label": "Point to the rule.",
+          "family": "Boundary"
+        },
+        {
+          "id": "C",
+          "label": "Make the call and move.",
+          "family": "Control"
+        },
+        {
+          "id": "D",
+          "label": "Explain it in a way people can hear.",
+          "family": "Recognition"
+        },
+        {
+          "id": "E",
+          "label": "Choose a route you can change.",
+          "family": "Pace"
+        }
+      ]
+    },
+    {
+      "id": "FH_A8",
+      "prompt": "Pressure rises across teams. You first…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Set one small action to refocus.",
+          "family": "Pace"
+        },
+        {
+          "id": "B",
+          "label": "Help people talk calmly.",
+          "family": "Stress"
+        },
+        {
+          "id": "C",
+          "label": "Wait until it's safe.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Quietly carry load so motion holds.",
+          "family": "Bonding"
+        },
+        {
+          "id": "E",
+          "label": "Explain where we're going next.",
+          "family": "Recognition"
+        }
+      ]
+    },
+    {
+      "id": "FH_A9",
+      "prompt": "A demo gets mixed feedback. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Stay on the working example and proof.",
+          "family": "Truth"
+        },
+        {
+          "id": "B",
+          "label": "Shift how you say it to hold attention.",
+          "family": "Recognition"
+        },
+        {
+          "id": "C",
+          "label": "Stop new asks; finish the current thing.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Pick a direction and adjust as you go.",
+          "family": "Pace"
+        },
+        {
+          "id": "E",
+          "label": "Line up the work across people.",
+          "family": "Control"
+        }
+      ]
+    },
+    {
+      "id": "FH_A10",
+      "prompt": "Several problems start at once. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Pick one and act.",
+          "family": "Control"
+        },
+        {
+          "id": "B",
+          "label": "Help teams share work and work together.",
+          "family": "Bonding"
+        },
+        {
+          "id": "C",
+          "label": "Hold until risk drops.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Explain why this matters most.",
+          "family": "Recognition"
+        },
+        {
+          "id": "E",
+          "label": "Let the work speak for itself.",
+          "family": "Truth"
+        }
+      ]
+    },
+    {
+      "id": "FH_A11",
+      "prompt": "A powerful person asks for something outside your plan. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Use the same rule; schedule them.",
+          "family": "Boundary"
+        },
+        {
+          "id": "B",
+          "label": "Fit them in with as little mess as possible.",
+          "family": "Bonding"
+        },
+        {
+          "id": "C",
+          "label": "Use the moment to set direction.",
+          "family": "Control"
+        },
+        {
+          "id": "D",
+          "label": "Offer a low-risk path.",
+          "family": "Pace"
+        },
+        {
+          "id": "E",
+          "label": "Explain the plan so it's accepted.",
+          "family": "Recognition"
+        }
+      ]
+    },
+    {
+      "id": "FH_A12",
+      "prompt": "The plan is unclear but things are moving. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Freeze scope; ship the smallest piece.",
+          "family": "Pace"
+        },
+        {
+          "id": "B",
+          "label": "Run the smallest-possible test; publish what it shows.",
+          "family": "Truth"
+        },
+        {
+          "id": "C",
+          "label": "Keep the edges clear.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Plan the update.",
+          "family": "Control"
+        },
+        {
+          "id": "E",
+          "label": "Line up people's schedules.",
+          "family": "Bonding"
+        }
+      ]
+    },
+    {
+      "id": "FH_A13",
+      "prompt": "A senior asks to skip the usual process. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Same rule as others.",
+          "family": "Boundary"
+        },
+        {
+          "id": "B",
+          "label": "Decide quickly and own it.",
+          "family": "Control"
+        },
+        {
+          "id": "C",
+          "label": "Try a small test.",
+          "family": "Truth"
+        },
+        {
+          "id": "D",
+          "label": "Turn it into a small piece you can test.",
+          "family": "Pace"
+        },
+        {
+          "id": "E",
+          "label": "Keep the bond; find a workable time.",
+          "family": "Bonding"
+        }
+      ]
+    },
+    {
+      "id": "FH_A14",
+      "prompt": "A big new chance appears during the build. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Keep the first version tight; schedule the next.",
+          "family": "Pace"
+        },
+        {
+          "id": "B",
+          "label": "Change the setup to support it.",
+          "family": "Stress"
+        },
+        {
+          "id": "C",
+          "label": "Update the rules for what's in or out so it's fair.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Make a clear call and reset.",
+          "family": "Control"
+        },
+        {
+          "id": "E",
+          "label": "Tell the story so people get it.",
+          "family": "Recognition"
+        }
+      ]
+    },
+    {
+      "id": "FH_A15",
+      "prompt": "Two groups are clashing live. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Set one small action.",
+          "family": "Pace"
+        },
+        {
+          "id": "B",
+          "label": "Help them share ground; cut the loss.",
+          "family": "Stress"
+        },
+        {
+          "id": "C",
+          "label": "Restate the rules for deciding.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Name the simple check that decides.",
+          "family": "Truth"
+        },
+        {
+          "id": "E",
+          "label": "Retell the point in their terms; keep eyes on it.",
+          "family": "Recognition"
+        }
+      ]
+    },
+    {
+      "id": "FH_A16",
+      "prompt": "Work is drifting off track. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Name the next step and assign it.",
+          "family": "Control"
+        },
+        {
+          "id": "B",
+          "label": "Choose a small step you can change and start.",
+          "family": "Pace"
+        },
+        {
+          "id": "C",
+          "label": "Say what starts and what stops.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Run a tiny test to get signal back.",
+          "family": "Truth"
+        },
+        {
+          "id": "E",
+          "label": "Line up schedules.",
+          "family": "Bonding"
+        }
+      ]
+    },
+    {
+      "id": "FH_A17",
+      "prompt": "Someone suggests a flashy fix. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Ask for proof first.",
+          "family": "Truth"
+        },
+        {
+          "id": "B",
+          "label": "Present it to see reactions.",
+          "family": "Recognition"
+        },
+        {
+          "id": "C",
+          "label": "Approve only if it meets the rules.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Try a quick test.",
+          "family": "Pace"
+        },
+        {
+          "id": "E",
+          "label": "Make the call and move.",
+          "family": "Control"
+        }
+      ]
+    },
+    {
+      "id": "FH_A18",
+      "prompt": "Team morale drops under heavy work. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Quietly provide help.",
+          "family": "Bonding"
+        },
+        {
+          "id": "B",
+          "label": "Change the order to find a time.",
+          "family": "Pace"
+        },
+        {
+          "id": "C",
+          "label": "Remind people of rules that protect focus.",
+          "family": "Boundary"
+        },
+        {
+          "id": "D",
+          "label": "Point attention at real progress.",
+          "family": "Recognition"
+        },
+        {
+          "id": "E",
+          "label": "Set a clear call.",
+          "family": "Control"
+        }
+      ]
+    },
+    {
+      "id": "FH_A19",
+      "prompt": "A rule/legal issue is flagged. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Enforce the rule and write it down.",
+          "family": "Boundary"
+        },
+        {
+          "id": "B",
+          "label": "Redo the process so the problem can't happen again.",
+          "family": "Truth"
+        },
+        {
+          "id": "C",
+          "label": "Speak calmly to restore trust.",
+          "family": "Stress"
+        },
+        {
+          "id": "D",
+          "label": "Get the right people to fix the problems.",
+          "family": "Bonding"
+        },
+        {
+          "id": "E",
+          "label": "Make a clear call and keep going.",
+          "family": "Control"
+        }
+      ]
+    },
+    {
+      "id": "FH_A20",
+      "prompt": "Timing is unclear and risk is rising. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold for the leverage window when other parts line up.",
+          "family": "Pace"
+        },
+        {
+          "id": "B",
+          "label": "Tighten the rules so there are fewer surprises.",
+          "family": "Boundary"
+        },
+        {
+          "id": "C",
+          "label": "Run a quick, low-cost test.",
+          "family": "Truth"
+        },
+        {
+          "id": "D",
+          "label": "Change the setting to restart motion.",
+          "family": "Stress"
+        },
+        {
+          "id": "E",
+          "label": "Point to the next concrete step.",
+          "family": "Control"
+        }
+      ]
+    },
+    {
+      "id": "FC-CTL-1",
+      "prompt": "Blocking rule: your instinct is to…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Replace it now.",
+          "face": "sovereign"
+        },
+        {
+          "id": "B",
+          "label": "Bypass to expose dead weight.",
+          "face": "rebel"
+        },
+        {
+          "id": "C",
+          "label": "Spark a visible first step.",
+          "face": "catalyst"
+        }
+      ]
+    },
+    {
+      "id": "FC-CTL-2",
+      "prompt": "Room is drifting: you…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Make a one-line call; move.",
+          "face": "sovereign"
+        },
+        {
+          "id": "B",
+          "label": "Provoke then channel energy.",
+          "face": "rebel"
+        },
+        {
+          "id": "C",
+          "label": "Do the first visible step; pull others in.",
+          "face": "catalyst"
+        }
+      ]
+    },
+    {
+      "id": "FC-CTL-3",
+      "prompt": "Under pressure, your opener is…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Command; set a binary.",
+          "face": "sovereign"
+        },
+        {
+          "id": "B",
+          "label": "Challenge the premise in public.",
+          "face": "rebel"
+        },
+        {
+          "id": "C",
+          "label": "Kick off a visible move; stabilize after.",
+          "face": "catalyst"
+        }
+      ]
+    },
+    {
+      "id": "FC-PAC-1",
+      "prompt": "With unclear odds, you…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Wait for the leverage window.",
+          "face": "strategist"
+        },
+        {
+          "id": "B",
+          "label": "Choose a reversible route and move now.",
+          "face": "navigator"
+        },
+        {
+          "id": "C",
+          "label": "Name the next era and move toward it.",
+          "face": "visionary"
+        }
+      ]
+    },
+    {
+      "id": "FC-PAC-2",
+      "prompt": "Mid-build opportunity appears. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Park it for v2; ship v1.",
+          "face": "navigator"
+        },
+        {
+          "id": "B",
+          "label": "Stretch v1 slightly to include it.",
+          "face": "strategist"
+        },
+        {
+          "id": "C",
+          "label": "Re-orient toward the bigger arc now.",
+          "face": "visionary"
+        }
+      ]
+    },
+    {
+      "id": "FC-PAC-3",
+      "prompt": "Timer is running, data is thin. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold for the right window.",
+          "face": "strategist"
+        },
+        {
+          "id": "B",
+          "label": "Act and adjust with feedback.",
+          "face": "navigator"
+        },
+        {
+          "id": "C",
+          "label": "Frame the future to pull people.",
+          "face": "visionary"
+        }
+      ]
+    },
+    {
+      "id": "FC-BND-1",
+      "prompt": "Queue is crowded. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hard gate: clear rules first.",
+          "face": "sentinel"
+        },
+        {
+          "id": "B",
+          "label": "Reset terms so access is even.",
+          "face": "equalizer"
+        },
+        {
+          "id": "C",
+          "label": "No until safe; then green-light.",
+          "face": "guardian"
+        }
+      ]
+    },
+    {
+      "id": "FC-BND-2",
+      "prompt": "Risky shortcut is proposed. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Say no until it meets the rules.",
+          "face": "guardian"
+        },
+        {
+          "id": "B",
+          "label": "Allow with guardrails.",
+          "face": "equalizer"
+        },
+        {
+          "id": "C",
+          "label": "Gate only when clear rules are met.",
+          "face": "sentinel"
+        }
+      ]
+    },
+    {
+      "id": "FC-BND-3",
+      "prompt": "A senior asks to skip the gate. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Apply same gate; schedule.",
+          "face": "sentinel"
+        },
+        {
+          "id": "B",
+          "label": "Reset terms for even application.",
+          "face": "equalizer"
+        },
+        {
+          "id": "C",
+          "label": "Protect people; decline until safe.",
+          "face": "guardian"
+        }
+      ]
+    },
+    {
+      "id": "FC-TRU-1",
+      "prompt": "Claims conflict. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Verify with tests; collapse uncertainty.",
+          "face": "seeker"
+        },
+        {
+          "id": "B",
+          "label": "Set up the standard clearly; route decisions through it.",
+          "face": "architect"
+        },
+        {
+          "id": "C",
+          "label": "Reframe into an advantage you can use now.",
+          "face": "alchemist"
+        }
+      ]
+    },
+    {
+      "id": "FC-TRU-2",
+      "prompt": "Messy inputs, limited time. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Ship the smallest test.",
+          "face": "seeker"
+        },
+        {
+          "id": "B",
+          "label": "Design a structure to lower future drag.",
+          "face": "architect"
+        },
+        {
+          "id": "C",
+          "label": "Convert scraps into a start.",
+          "face": "alchemist"
+        }
+      ]
+    },
+    {
+      "id": "FC-TRU-3",
+      "prompt": "A flashy fix is pitched. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Ask for a proof path first.",
+          "face": "seeker"
+        },
+        {
+          "id": "B",
+          "label": "Write the standard first; then adopt.",
+          "face": "architect"
+        },
+        {
+          "id": "C",
+          "label": "Bend it into measurable yield.",
+          "face": "alchemist"
+        }
+      ]
+    },
+    {
+      "id": "FC-REC-1",
+      "prompt": "How do you make your work land?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Run the room; stage the reveal.",
+          "face": "spotlight"
+        },
+        {
+          "id": "B",
+          "label": "Match tone and norms to keep access.",
+          "face": "mask"
+        },
+        {
+          "id": "C",
+          "label": "Let the build quality speak.",
+          "face": "artisan"
+        }
+      ]
+    },
+    {
+      "id": "FC-REC-2",
+      "prompt": "During a demo, you tend to…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Direct attention in real time.",
+          "face": "spotlight"
+        },
+        {
+          "id": "B",
+          "label": "Mirror tone to minimize friction.",
+          "face": "mask"
+        },
+        {
+          "id": "C",
+          "label": "Stay on the prototype and proof.",
+          "face": "artisan"
+        }
+      ]
+    },
+    {
+      "id": "FC-REC-3",
+      "prompt": "Post-ship, your instinct is…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Orchestrate the launch moment.",
+          "face": "spotlight"
+        },
+        {
+          "id": "B",
+          "label": "Match the room’s norms to keep access.",
+          "face": "mask"
+        },
+        {
+          "id": "C",
+          "label": "Let the finished work age well.",
+          "face": "artisan"
+        }
+      ]
+    },
+    {
+      "id": "FC-BON-1",
+      "prompt": "A teammate's need conflicts with plan. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Pick up extra load to stabilize.",
+          "face": "provider"
+        },
+        {
+          "id": "B",
+          "label": "Renegotiate together; protect edges.",
+          "face": "partner"
+        },
+        {
+          "id": "C",
+          "label": "Serve the mission first; take the task.",
+          "face": "servant"
+        }
+      ]
+    },
+    {
+      "id": "FC-BON-2",
+      "prompt": "Credit was misassigned. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Explain calmly and keep the bond.",
+          "face": "partner"
+        },
+        {
+          "id": "B",
+          "label": "Let it go now; fix later.",
+          "face": "provider"
+        },
+        {
+          "id": "C",
+          "label": "Stand on duty and example.",
+          "face": "servant"
+        }
+      ]
+    },
+    {
+      "id": "FC-BON-3",
+      "prompt": "Team is strained. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Quietly provision resources.",
+          "face": "provider"
+        },
+        {
+          "id": "B",
+          "label": "Synchronize people and plans.",
+          "face": "partner"
+        },
+        {
+          "id": "C",
+          "label": "Carry unglamorous work without signal cost.",
+          "face": "servant"
+        }
+      ]
+    },
+    {
+      "id": "FC-STR-1",
+      "prompt": "Heat rises across factions. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Broker overlap; keep channels open.",
+          "face": "diplomat"
+        },
+        {
+          "id": "B",
+          "label": "Change environment to restart motion.",
+          "face": "wanderer"
+        },
+        {
+          "id": "C",
+          "label": "Land one quick win; then steady.",
+          "face": "catalyst"
+        }
+      ]
+    },
+    {
+      "id": "FC-STR-2",
+      "prompt": "Multiple fires at once. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Land one quick win to re-focus.",
+          "face": "catalyst"
+        },
+        {
+          "id": "B",
+          "label": "Broker a truce; cool the room.",
+          "face": "diplomat"
+        },
+        {
+          "id": "C",
+          "label": "Walk away; change terrain.",
+          "face": "wanderer"
+        }
+      ]
+    },
+    {
+      "id": "FC-STR-3",
+      "prompt": "Process is stuck and roles feel rigid. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Shift context; find looser path.",
+          "face": "wanderer"
+        },
+        {
+          "id": "B",
+          "label": "Place a small win to restart flow.",
+          "face": "catalyst"
+        },
+        {
+          "id": "C",
+          "label": "Translate terms; create workable overlap.",
+          "face": "diplomat"
+        }
+      ]
+    },
+    {
+      "id": "FD-CTL-1",
+      "prompt": "A blocking rule stops motion. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Replace the rule now; set a simple standard.",
+          "face": "sovereign"
+        },
+        {
+          "id": "B",
+          "label": "Bypass to expose dead weight publicly.",
+          "face": "rebel"
+        }
+      ]
+    },
+    {
+      "id": "FD-CTL-2",
+      "prompt": "Room is drifting and attention is fading. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Make a one-line call; others orient.",
+          "face": "sovereign"
+        },
+        {
+          "id": "B",
+          "label": "Do the first visible step; create momentum.",
+          "face": "catalyst"
+        }
+      ]
+    },
+    {
+      "id": "FD-CTL-3",
+      "prompt": "Pushback escalates. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Challenge the premise in public.",
+          "face": "rebel"
+        },
+        {
+          "id": "B",
+          "label": "Ignite a small move and stabilize after.",
+          "face": "catalyst"
+        }
+      ]
+    },
+    {
+      "id": "FD-PAC-1",
+      "prompt": "Odds are unclear and time is limited. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold for the higher-leverage window.",
+          "face": "strategist"
+        },
+        {
+          "id": "B",
+          "label": "Place a small reversible stake now.",
+          "face": "navigator"
+        }
+      ]
+    },
+    {
+      "id": "FD-PAC-2",
+      "prompt": "You see a future arc beyond the current plan. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Sequence for timing; keep advantage high.",
+          "face": "strategist"
+        },
+        {
+          "id": "B",
+          "label": "Name the next era; start pulling toward it.",
+          "face": "visionary"
+        }
+      ]
+    },
+    {
+      "id": "FD-PAC-3",
+      "prompt": "Direction is fuzzy but momentum exists. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Choose a reversible route now; adjust in motion.",
+          "face": "navigator"
+        },
+        {
+          "id": "B",
+          "label": "Frame the future to align people first.",
+          "face": "visionary"
+        }
+      ]
+    },
+    {
+      "id": "FD-BND-1",
+      "prompt": "Queue is crowded and pressure rises. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Apply hard rules; clean gate.",
+          "face": "sentinel"
+        },
+        {
+          "id": "B",
+          "label": "Reset terms to even access.",
+          "face": "equalizer"
+        }
+      ]
+    },
+    {
+      "id": "FD-BND-2",
+      "prompt": "Safety signal spikes on a request. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "No until safe; then green-light.",
+          "face": "guardian"
+        },
+        {
+          "id": "B",
+          "label": "Hold the stated rule; open/close cleanly.",
+          "face": "sentinel"
+        }
+      ]
+    },
+    {
+      "id": "FD-BND-3",
+      "prompt": "A senior asks to skip the process. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Rebalance terms so it's fair to all.",
+          "face": "equalizer"
+        },
+        {
+          "id": "B",
+          "label": "Protect people; decline until risk is low.",
+          "face": "guardian"
+        }
+      ]
+    },
+    {
+      "id": "FD-TRU-1",
+      "prompt": "Conflicting claims, limited time. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Run the smallest test; collapse uncertainty.",
+          "face": "seeker"
+        },
+        {
+          "id": "B",
+          "label": "Formalize structure; route decisions.",
+          "face": "architect"
+        }
+      ]
+    },
+    {
+      "id": "FD-TRU-2",
+      "prompt": "Setback hits; messy inputs remain. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Ask for proof path; keep it testable.",
+          "face": "seeker"
+        },
+        {
+          "id": "B",
+          "label": "Reframe scraps into a result you can measure now.",
+          "face": "alchemist"
+        }
+      ]
+    },
+    {
+      "id": "FD-TRU-3",
+      "prompt": "A novel approach could help, but standards are unclear. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Write the rules first before using it.",
+          "face": "architect"
+        },
+        {
+          "id": "B",
+          "label": "Bend the approach into a result you can measure now.",
+          "face": "alchemist"
+        }
+      ]
+    },
+    {
+      "id": "FD-REC-1",
+      "prompt": "How do you make the work land?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Run the room and stage the reveal.",
+          "face": "spotlight"
+        },
+        {
+          "id": "B",
+          "label": "Match tone and norms to keep access.",
+          "face": "mask"
+        }
+      ]
+    },
+    {
+      "id": "FD-REC-2",
+      "prompt": "In launch moments, you prefer to…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Guide attention live.",
+          "face": "spotlight"
+        },
+        {
+          "id": "B",
+          "label": "Let the finished work speak.",
+          "face": "artisan"
+        }
+      ]
+    },
+    {
+      "id": "FD-REC-3",
+      "prompt": "Visibility is high; stakes are public. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Match the room's rules to keep access.",
+          "face": "mask"
+        },
+        {
+          "id": "B",
+          "label": "Let shipped proof carry the message.",
+          "face": "artisan"
+        }
+      ]
+    },
+    {
+      "id": "FD-BON-1",
+      "prompt": "A teammate's need conflicts with plan. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Pick up extra load to stabilize them.",
+          "face": "provider"
+        },
+        {
+          "id": "B",
+          "label": "Renegotiate edges together.",
+          "face": "partner"
+        }
+      ]
+    },
+    {
+      "id": "FD-BON-2",
+      "prompt": "Mission load spikes. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Serve the mission first; take the task.",
+          "face": "servant"
+        },
+        {
+          "id": "B",
+          "label": "Stabilize the person so the plan holds.",
+          "face": "provider"
+        }
+      ]
+    },
+    {
+      "id": "FD-BON-3",
+      "prompt": "The bond is straining under pressure. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Synchronize plans; protect edges for each person.",
+          "face": "partner"
+        },
+        {
+          "id": "B",
+          "label": "Absorb unglamorous work; model duty.",
+          "face": "servant"
+        }
+      ]
+    },
+    {
+      "id": "FD-STR-1",
+      "prompt": "Heat rises across groups. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Help sides meet; keep people talking.",
+          "face": "diplomat"
+        },
+        {
+          "id": "B",
+          "label": "Change the environment to restart motion.",
+          "face": "wanderer"
+        }
+      ]
+    },
+    {
+      "id": "FD-STR-2",
+      "prompt": "System is stuck; attention is flat. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Spark a visible first step now.",
+          "face": "catalyst"
+        },
+        {
+          "id": "B",
+          "label": "Help them agree and calm down.",
+          "face": "diplomat"
+        }
+      ]
+    },
+    {
+      "id": "FD-STR-3",
+      "prompt": "Momentum is low and roles feel rigid. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Change the setting; leave the stuck spot.",
+          "face": "wanderer"
+        },
+        {
+          "id": "B",
+          "label": "Start motion with a small win.",
+          "face": "catalyst"
+        }
+      ]
+    },
+    {
+      "id": "L-CTL-1",
+      "prompt": "The team is stuck on a decision.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Make the call now and move.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Ask for more input; decide later today.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Leave it and hope it moves on its own.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-CTL-2",
+      "prompt": "The process owner disagrees with your direction.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold the line; make it a clear yes/no.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Soften it; try both paths for a bit.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Drop the call; wait for everyone to agree.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-PAC-1",
+      "prompt": "The deadline is close and the plan is fuzzy.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Freeze scope; ship the smallest piece.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Collect signal until morning; start at 9 am.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Wait for a better time.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-PAC-2",
+      "prompt": "You see a bigger chance during the build.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Save it for the second version; finish the first.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Stretch the first version a little to include it.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Scrap the first version to chase it now.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-BND-1",
+      "prompt": "A senior leader skips the line.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Same rule; schedule them cleanly.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Accommodate with a one-off slot; keep flow intact.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Let them through; fix fallout later.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-BND-2",
+      "prompt": "A risky shortcut shows up.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Say no until it meets the rules.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Let it happen with limits and checks.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Say yes to save time.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-TRU-1",
+      "prompt": "Data conflicts with your plan.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Run a quick test; adjust if needed.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Keep going but add checks.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Ignore it and push through.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-TRU-2",
+      "prompt": "A teammate pitches a flashy fix.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Ask for a proof path, then decide.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Try it in parallel; decide later.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Adopt it right away.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-REC-1",
+      "prompt": "You shipped a win.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Let the finished work speak; move on.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Tune the message to the room.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Lead with optics now; backfill proof after.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-REC-2",
+      "prompt": "Feedback is split in a demo.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Stay on the working example and results.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Shift tone to hold attention.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Pivot to impress the room even if scope shifts.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-BON-1",
+      "prompt": "A close teammate needs time that goes against your plan.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold your edge; find another slot.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Bend a little to keep the bond.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Drop your plan entirely for them.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-BON-2",
+      "prompt": "Credit went to the wrong person.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Explain calmly and keep the bond.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Let it go for now; fix later.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Confront credit on-mic during the meeting.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-STR-1",
+      "prompt": "Two groups are clashing live.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Set one small action and refocus.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Help them share ground and cool down.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Walk away; change the setting.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L-STR-2",
+      "prompt": "Several problems start at once.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Pick one and act; make progress.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Broker shared ground between owners; reopen a lane.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Freeze until calm returns.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-CTL-1",
+      "prompt": "Timer: 30 min; decision stuck. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Make the call now and move.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Ask for more input; decide later today.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Leave it and hope it moves on its own.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-CTL-2",
+      "prompt": "Process owner objects in review. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold the line; make it a clear yes/no.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Soften it; try both paths for a bit.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Drop the call; wait for everyone to agree.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-PAC-1",
+      "prompt": "Timer: 48h; spec is drifting. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Freeze scope; ship the smallest piece.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Gather more signal; start tomorrow.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Wait for a better time.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-PAC-2",
+      "prompt": "Opportunity appears mid-build live. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Save it for version 2; finish version 1.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Stretch version 1 a little to include it.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Blow up version 1 to chase it now.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-BND-1",
+      "prompt": "VIP skips queue during on-call. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Same rule; schedule them cleanly.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Fit them in with minimal disruption.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Let them through; fix fallout later.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-BND-2",
+      "prompt": "Security flag appears mid-sprint. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Say no until it meets the rules.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Allow with limits and checks.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Say yes to save time.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-TRU-1",
+      "prompt": "Data contradicts your plan at stand-up. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Run a quick test; adjust if needed.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Proceed but add monitoring.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Ignore it and push through.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-TRU-2",
+      "prompt": "Flashy fix with thin proof; demo in 2h. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Ask for a proof path, then decide.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Try it in parallel; decide later.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Adopt it right away.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-REC-1",
+      "prompt": "You shipped a win; leadership watching. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Let the finished work speak; move on.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Tune the message to the room.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Make a big show; proof later.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-REC-2",
+      "prompt": "Feedback is split in a live demo. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Stay on the working example and results.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Shift tone to hold attention.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Chase reactions; change scope mid-demo.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-BON-1",
+      "prompt": "Close teammate needs time; your slot collides. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold your edge; find another slot.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Bend a little to keep the bond.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Drop your plan entirely for them.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-BON-2",
+      "prompt": "Credit is misassigned during retro. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Explain calmly and keep the bond.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Let it go now; fix later.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Call it out in public.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-STR-1",
+      "prompt": "Two groups clash live in an incident call. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Set one tiny action and refocus.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Help them agree and calm down.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Walk away; change the setting.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "L_TB-STR-2",
+      "prompt": "Several problems start at once across teams. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Pick one and act; make progress.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Open more channels; align people.",
+          "verdict": "O"
+        },
+        {
+          "id": "C",
+          "label": "Freeze until calm returns.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-CON-1",
+      "prompt": "Decision is stuck. Which move is more like you?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Make the call now; set a binary.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Invite more input; decide later today.",
+          "verdict": "O"
+        }
+      ]
+    },
+    {
+      "id": "LD-CON-2",
+      "prompt": "Direction is unclear. What do you actually do?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Soften the call; pilot both.",
+          "verdict": "O"
+        },
+        {
+          "id": "B",
+          "label": "Leave it unresolved; hope momentum returns.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-CON-3",
+      "prompt": "High-stakes call under time. Choose the move you take.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Set the call and move.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Drop the call; wait for consensus.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-PAC-1",
+      "prompt": "Deadline is close and scope is fuzzy. What's your move?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Freeze scope; ship the smallest viable.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Gather more signal; start tomorrow.",
+          "verdict": "O"
+        }
+      ]
+    },
+    {
+      "id": "LD-PAC-2",
+      "prompt": "Window is slipping. Which do you do more often?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Gather more signal; start tomorrow.",
+          "verdict": "O"
+        },
+        {
+          "id": "B",
+          "label": "Delay for a better timing window.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-PAC-3",
+      "prompt": "Opportunity appears mid-build. Your instinct is…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Keep v1 tight; ship it.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Blow up v1 to chase it now.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-BOU-1",
+      "prompt": "An exec skips the queue. What do you actually do?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Apply the same gate; schedule properly.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Fit them in with minimal disruption.",
+          "verdict": "O"
+        }
+      ]
+    },
+    {
+      "id": "LD-BOU-2",
+      "prompt": "Risky shortcut is on the table. Your tendency is…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Allow with guardrails and monitoring.",
+          "verdict": "O"
+        },
+        {
+          "id": "B",
+          "label": "Let them through; fix fallout later.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-BOU-3",
+      "prompt": "Compliance concern vs speed. You typically…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Decline until criteria are met.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Approve to save time.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-TRU-1",
+      "prompt": "Data conflicts with plan. What do you do most?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Run a quick test; adjust if needed.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Proceed but add monitoring.",
+          "verdict": "O"
+        }
+      ]
+    },
+    {
+      "id": "LD-TRU-2",
+      "prompt": "Flashy fix with thin proof. Which are you more likely to do?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Try it in parallel; decide later.",
+          "verdict": "O"
+        },
+        {
+          "id": "B",
+          "label": "Adopt it immediately without proof.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-TRU-3",
+      "prompt": "Tension between proof and pressure. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Ask for a proof path first.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Ignore the data and push through.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-REC-1",
+      "prompt": "You shipped a win. Which landing fits you more?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Let the artifact speak; move on.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Tune comms to the room.",
+          "verdict": "O"
+        }
+      ]
+    },
+    {
+      "id": "LD-REC-2",
+      "prompt": "Demo heat rises. You tend to…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Shift tone and framing to hold attention.",
+          "verdict": "O"
+        },
+        {
+          "id": "B",
+          "label": "Make a big show; proof later.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-REC-3",
+      "prompt": "Audience is large; optics are high. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Let shipped proof carry the message.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Run the show even if proof is thin.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-BON-1",
+      "prompt": "A teammate needs time that conflicts with your plan.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold your edge; find another slot.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Bend a little to keep the bond.",
+          "verdict": "O"
+        }
+      ]
+    },
+    {
+      "id": "LD-BON-2",
+      "prompt": "Credit was misassigned. You more often…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Let it go for now; fix later.",
+          "verdict": "O"
+        },
+        {
+          "id": "B",
+          "label": "Confront publicly; escalate heat.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-BON-3",
+      "prompt": "Relationship under pressure. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Clarify calmly; keep the bond intact.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Drop your plan entirely for them.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-STR-1",
+      "prompt": "Two groups are clashing live. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Set a small action and refocus.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Broker overlap and cool the room.",
+          "verdict": "O"
+        }
+      ]
+    },
+    {
+      "id": "LD-STR-2",
+      "prompt": "Heat spikes; attention fractures. You…",
+      "options": [
+        {
+          "id": "A",
+          "label": "Broker overlap and cool the room.",
+          "verdict": "O"
+        },
+        {
+          "id": "B",
+          "label": "Walk away; change environment.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "LD-STR-3",
+      "prompt": "System is stuck. Which move is more like you?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Set one small action; refocus.",
+          "verdict": "C"
+        },
+        {
+          "id": "B",
+          "label": "Walk away; change environment.",
+          "verdict": "F"
+        }
+      ]
+    },
+    {
+      "id": "MD-1",
+      "prompt": "Which move do you actually take most often when it costs you reputation?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Hold the gate"
+        },
+        {
+          "id": "B",
+          "label": "Make the smallest test"
+        }
+      ]
+    },
+    {
+      "id": "MD-2",
+      "prompt": "When the room resists, which lever do you pull first?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Decide and move"
+        },
+        {
+          "id": "B",
+          "label": "Reframe so they can hear it"
+        }
+      ]
+    }
+  ]
+}

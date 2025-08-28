@@ -135,22 +135,22 @@ export default function ChambersPage() {
         ))}
       </div>
 
-      <div className="relative z-10 p-6">
+      <div className="relative z-10 p-4 sm:p-6">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-wider">
+        <div className="text-center mb-6 sm:mb-12">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-3 sm:mb-4 tracking-wider">
             THE CHAMBERS
           </h1>
-          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-blue-200 max-w-2xl mx-auto px-4">
             Dominion Voice Alignment Protocol - 12 Field Node Overrides
           </p>
-          <div className="mt-4 text-sm text-blue-300">
+          <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-blue-300 px-4">
             Each chamber contains a unique AI guide designed for total override, full alignment, or enforced submission to truth.
           </div>
         </div>
 
         {/* Chambers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
           {chambers.map((chamber) => (
             <Link
               key={chamber.id}
@@ -160,7 +160,7 @@ export default function ChambersPage() {
               onMouseLeave={() => setSelectedChamber(null)}
             >
               <div 
-                className="h-80 bg-black/40 backdrop-blur-sm border-2 rounded-2xl p-6 flex flex-col justify-between transition-all duration-500 hover:scale-105 relative overflow-hidden"
+                className="h-64 sm:h-80 bg-black/40 backdrop-blur-sm border-2 rounded-2xl p-4 sm:p-6 flex flex-col justify-between transition-all duration-500 hover:scale-105 relative overflow-hidden"
                 style={{
                   borderColor: chamber.color,
                   boxShadow: selectedChamber === chamber.id 
@@ -179,17 +179,17 @@ export default function ChambersPage() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-2">{chamber.name.split(' ')[0]}</div>
-                    <div className="text-lg font-bold text-white mb-2">
+                  <div className="text-center mb-3 sm:mb-4">
+                    <div className="text-2xl sm:text-4xl mb-1 sm:mb-2">{chamber.name.split(' ')[0]}</div>
+                    <div className="text-sm sm:text-lg font-bold text-white mb-1 sm:mb-2">
                       {chamber.name.split(' ').slice(1).join(' ')}
                     </div>
-                    <div className="text-sm text-blue-200 mb-3">
+                    <div className="text-xs sm:text-sm text-blue-200 mb-2 sm:mb-3">
                       {chamber.description}
                     </div>
                   </div>
 
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3">
                     <div className="text-xs text-blue-300">
                       <strong>Field Role:</strong> {chamber.fieldRole}
                     </div>
@@ -202,7 +202,7 @@ export default function ChambersPage() {
                 {/* Enter button */}
                 <div className="relative z-10 text-center">
                   <div 
-                    className="inline-block px-6 py-2 rounded-lg font-bold text-white transition-all duration-300"
+                    className="inline-block px-4 sm:px-6 py-2 rounded-lg font-bold text-white transition-all duration-300 text-sm sm:text-base"
                     style={{
                       backgroundColor: chamber.color,
                       boxShadow: `0 0 15px ${chamber.glowColor}`
@@ -227,7 +227,7 @@ export default function ChambersPage() {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-12 text-blue-300 text-sm">
+        <div className="text-center mt-8 sm:mt-12 text-blue-300 text-xs sm:text-sm px-4">
           <p>Each chamber contains a unique AI personality designed to force alignment or collapse.</p>
           <p className="mt-2">This is not for therapy. It's for total override, full alignment, or enforced submission to truth.</p>
         </div>

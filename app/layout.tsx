@@ -33,9 +33,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <UTMTracker />
-        <GA4Tracker 
-          measurementId={process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID!}
-        />
+        {process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID && (
+          <GA4Tracker 
+            measurementId={process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID}
+          />
+        )}
       </head>
       <body className={`${geistSans.className} antialiased`}>
         <ThemeProvider

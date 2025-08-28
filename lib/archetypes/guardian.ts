@@ -12,70 +12,6 @@ export const guardianArchetype: Archetype = {
   
   stages: [
     {
-      key: "wall",
-      label: "The Wall",
-      color: "#1e3a8a",
-      description: "You confront immediately and set clear boundaries. You build barriers to keep chaos contained and protect your space.",
-      needs: "Learn when to flex and when to hold, balance strength with flexibility.",
-      questions: [
-        {
-          id: "g1",
-          text: "When someone breaks a rule in your space, you…",
-          options: [
-            { text: "Confront immediately and set a clear boundary.", value: 5 },
-            { text: "Step in to mediate and protect others from the fallout.", value: 4 },
-            { text: "Make a note to address it later in a private, careful way.", value: 3 },
-            { text: "Watch quietly, assessing if it's a pattern or a one-time thing.", value: 2 },
-            { text: "Let it pass unless it threatens the core foundation.", value: 1 }
-          ]
-        },
-        {
-          id: "g2",
-          text: "When a crisis erupts at work or home, your first instinct is to…",
-          options: [
-            { text: "Hold your ground and wait for things to settle.", value: 1 },
-            { text: "Build a barrier to keep chaos contained.", value: 5 },
-            { text: "Observe, then advise on the safest route.", value: 2 },
-            { text: "Jump in to shield those at risk.", value: 4 },
-            { text: "Secure important details or resources.", value: 3 }
-          ]
-        },
-        {
-          id: "g3",
-          text: "When someone criticizes your way of doing things, you…",
-          options: [
-            { text: "Consider their feedback but keep what works for you.", value: 3 },
-            { text: "Ask clarifying questions to see if the criticism is valid.", value: 2 },
-            { text: "Defend your approach and push back.", value: 5 },
-            { text: "Stay calm—if it matters, you'll address it in time.", value: 1 },
-            { text: "Feel responsible and want to fix the problem for everyone.", value: 4 }
-          ]
-        },
-        {
-          id: "g4",
-          text: "In a new environment, you tend to…",
-          options: [
-            { text: "Scan and assess the risks before acting.", value: 2 },
-            { text: "Offer to help others get oriented.", value: 4 },
-            { text: "Stick close to what you already know or trust.", value: 3 },
-            { text: "Find your personal space and claim it.", value: 5 },
-            { text: "Observe quietly and root yourself once you're comfortable.", value: 1 }
-          ]
-        },
-        {
-          id: "g5",
-          text: "When a long-term plan fails, you…",
-          options: [
-            { text: "Take responsibility and help others recover.", value: 4 },
-            { text: "Try to shield yourself and others from blame.", value: 5 },
-            { text: "Analyze what signals you missed and adjust.", value: 2 },
-            { text: "Accept the loss and look for a new point of stability.", value: 1 },
-            { text: "Salvage what you can and maintain the routine.", value: 3 }
-          ]
-        }
-      ]
-    },
-    {
       key: "shielded",
       label: "The Shielded",
       color: "#3b82f6",
@@ -83,58 +19,58 @@ export const guardianArchetype: Archetype = {
       needs: "Learn to protect yourself as fiercely as you protect others, set limits, release what's not yours to carry.",
       questions: [
         {
-          id: "g6",
-          text: "If you feel exhausted at the end of the week, you…",
+          id: "g1",
+          text: "When someone breaks a rule in your space, you…",
           options: [
-            { text: "Look for ways to help others recharge as well as yourself.", value: 5 },
-            { text: "Withdraw, needing total stillness to recover.", value: 1 },
-            { text: "Block out all demands until you're restored.", value: 5 },
-            { text: "Stick to your routines and comfort rituals for stability.", value: 3 },
-            { text: "Scan for causes and plan to avoid a repeat.", value: 2 }
+            { text: "Step in to mediate and protect others from the fallout.", value: 5 },
+            { text: "Make a note to address it later in a private, careful way.", value: 4 },
+            { text: "Watch quietly, assessing if it's a pattern or a one-time thing.", value: 3 },
+            { text: "Let it pass unless it threatens the core foundation.", value: 2 },
+            { text: "Confront immediately and set a clear boundary.", value: 1 }
           ]
         },
         {
-          id: "g7",
-          text: "If a friend is struggling but hasn't asked for help, you…",
+          id: "g2",
+          text: "When a crisis erupts at work or home, your first instinct is to…",
           options: [
-            { text: "Step in anyway—they shouldn't struggle alone.", value: 5 },
-            { text: "Wait and gently offer support later.", value: 3 },
-            { text: "Ask direct questions to find out what's wrong.", value: 5 },
-            { text: "Monitor from a distance, intervening if things worsen.", value: 2 },
-            { text: "Remain available, but only act if asked.", value: 1 }
+            { text: "Jump in to shield those at risk.", value: 5 },
+            { text: "Take responsibility for helping others.", value: 4 },
+            { text: "Secure important details or resources.", value: 3 },
+            { text: "Observe, then advise on the safest route.", value: 2 },
+            { text: "Hold your ground and wait for things to settle.", value: 1 }
           ]
         },
         {
-          id: "g8",
-          text: "When a relationship becomes distant, you…",
+          id: "g3",
+          text: "When someone criticizes your way of doing things, you…",
           options: [
-            { text: "Watch for subtle shifts, waiting for an opening to reconnect.", value: 2 },
-            { text: "Erect emotional boundaries, avoiding vulnerability.", value: 5 },
-            { text: "Reach out to repair the connection.", value: 5 },
-            { text: "Give space, believing time will re-root things.", value: 1 },
-            { text: "Hold onto memories and maintain basic contact.", value: 3 }
+            { text: "Feel responsible and want to fix the problem for everyone.", value: 5 },
+            { text: "Consider their feedback but keep what works for you.", value: 4 },
+            { text: "Ask clarifying questions to see if the criticism is valid.", value: 3 },
+            { text: "Stay calm—if it matters, you'll address it in time.", value: 2 },
+            { text: "Defend your approach and push back.", value: 1 }
           ]
         },
         {
-          id: "g9",
-          text: "During a team conflict, you…",
+          id: "g4",
+          text: "In a new environment, you tend to…",
           options: [
-            { text: "Act as mediator to resolve the tension.", value: 5 },
-            { text: "Take sides only to protect your core group.", value: 5 },
-            { text: "Gather information and suggest solutions quietly.", value: 2 },
-            { text: "Stay steady—don't get pulled in unless necessary.", value: 1 },
-            { text: "Remind the team of shared goals and history.", value: 3 }
+            { text: "Offer to help others get oriented.", value: 5 },
+            { text: "Stick close to what you already know or trust.", value: 4 },
+            { text: "Scan and assess the risks before acting.", value: 3 },
+            { text: "Observe quietly and root yourself once you're comfortable.", value: 2 },
+            { text: "Find your personal space and claim it.", value: 1 }
           ]
         },
         {
-          id: "g10",
-          text: "When a project ends, you…",
+          id: "g5",
+          text: "When a long-term plan fails, you…",
           options: [
-            { text: "Feel exposed and want to retreat.", value: 5 },
-            { text: "Reflect on what patterns emerged.", value: 2 },
-            { text: "Archive the results and keep documentation.", value: 3 },
-            { text: "Check that everyone is okay.", value: 5 },
-            { text: "Let go and seek a new purpose.", value: 1 }
+            { text: "Take responsibility and help others recover.", value: 5 },
+            { text: "Try to shield yourself and others from blame.", value: 4 },
+            { text: "Salvage what you can and maintain the routine.", value: 3 },
+            { text: "Analyze what signals you missed and adjust.", value: 2 },
+            { text: "Accept the loss and look for a new point of stability.", value: 1 }
           ]
         }
       ]
@@ -147,58 +83,122 @@ export const guardianArchetype: Archetype = {
       needs: "Learn to address issues directly when needed, don't always defer to later.",
       questions: [
         {
-          id: "g11",
-          text: "When someone repeatedly asks for help, you…",
+          id: "g6",
+          text: "If you feel exhausted at the end of the week, you…",
           options: [
-            { text: "Offer structured support with boundaries.", value: 5 },
-            { text: "Keep helping, even at your own expense.", value: 4 },
-            { text: "Directly address the dependency issue.", value: 5 },
-            { text: "Offer guidance, but withdraw if there's no progress.", value: 1 },
-            { text: "Analyze if there's a hidden problem.", value: 2 }
+            { text: "Look for ways to help others recharge as well as yourself.", value: 5 },
+            { text: "Block out all demands until you're restored.", value: 4 },
+            { text: "Stick to your routines and comfort rituals for stability.", value: 3 },
+            { text: "Scan for causes and plan to avoid a repeat.", value: 2 },
+            { text: "Withdraw, needing total stillness to recover.", value: 1 }
           ]
         },
         {
-          id: "g12",
+          id: "g7",
+          text: "If a friend is struggling but hasn't asked for help, you…",
+          options: [
+            { text: "Step in anyway—they shouldn't struggle alone.", value: 5 },
+            { text: "Offer support but wait for them to ask.", value: 4 },
+            { text: "Check in regularly without being pushy.", value: 3 },
+            { text: "Give them space but let them know you're available.", value: 2 },
+            { text: "Respect their boundaries and wait for a signal.", value: 1 }
+          ]
+        },
+        {
+          id: "g8",
+          text: "When someone repeatedly asks for help, you…",
+          options: [
+            { text: "Keep helping, even at your own expense.", value: 5 },
+            { text: "Offer structured support with boundaries.", value: 4 },
+            { text: "Analyze if there's a hidden problem.", value: 3 },
+            { text: "Offer guidance, but withdraw if there's no progress.", value: 2 },
+            { text: "Directly address the dependency issue.", value: 1 }
+          ]
+        },
+        {
+          id: "g9",
           text: "When given a new responsibility, you…",
           options: [
-            { text: "Take charge and support others to succeed.", value: 4 },
+            { text: "Take charge and support others to succeed.", value: 5 },
+            { text: "Incorporate it into your routine carefully.", value: 4 },
+            { text: "Define clear rules and boundaries up front.", value: 3 },
             { text: "Ask for details, anticipate obstacles.", value: 2 },
-            { text: "Incorporate it into your routine carefully.", value: 5 },
-            { text: "Define clear rules and boundaries up front.", value: 5 },
             { text: "Accept it, but only if it fits your core values.", value: 1 }
           ]
         },
         {
-          id: "g13",
+          id: "g10",
           text: "When someone in your group is disruptive, you…",
           options: [
-            { text: "Step in to restore order.", value: 4 },
-            { text: "Set immediate limits.", value: 5 },
+            { text: "Step in to restore order.", value: 5 },
+            { text: "Set immediate limits.", value: 4 },
+            { text: "Pull them aside later for a private talk.", value: 3 },
             { text: "Watch to see if the pattern continues.", value: 2 },
-            { text: "Pull them aside later for a private talk.", value: 5 },
             { text: "Only intervene if it threatens the group's foundation.", value: 1 }
           ]
-        },
+        }
+      ]
+    },
+    {
+      key: "wall",
+      label: "The Wall",
+      color: "#1e3a8a",
+      description: "You confront immediately and set clear boundaries. You build barriers to keep chaos contained and protect your space.",
+      needs: "Learn when to flex and when to hold, balance strength with flexibility.",
+      questions: [
         {
-          id: "g14",
+          id: "g11",
           text: "When your routine is broken, you…",
           options: [
             { text: "Get frustrated and try to repair it.", value: 5 },
-            { text: "Look for lessons or warnings in the disruption.", value: 2 },
             { text: "Help others adjust.", value: 4 },
-            { text: "Adapt, but keep as much familiar as possible.", value: 5 },
+            { text: "Adapt, but keep as much familiar as possible.", value: 3 },
+            { text: "Look for lessons or warnings in the disruption.", value: 2 },
             { text: "Accept it and find a new rhythm.", value: 1 }
           ]
         },
         {
-          id: "g15",
+          id: "g12",
           text: "When someone new joins your circle, you…",
           options: [
             { text: "Introduce them to routines and systems.", value: 5 },
             { text: "Make them feel welcome and safe.", value: 4 },
-            { text: "Wait and let them find their own place.", value: 1 },
+            { text: "Assert your presence, test their respect for boundaries.", value: 3 },
             { text: "Observe them quietly, look for red flags.", value: 2 },
-            { text: "Assert your presence, test their respect for boundaries.", value: 5 }
+            { text: "Wait and let them find their own place.", value: 1 }
+          ]
+        },
+        {
+          id: "g13",
+          text: "When facing a threat, you…",
+          options: [
+            { text: "Stand your ground and repel.", value: 5 },
+            { text: "Put yourself between others and harm.", value: 4 },
+            { text: "Protect key resources or traditions.", value: 3 },
+            { text: "Plan several responses.", value: 2 },
+            { text: "Endure, staying unmoved.", value: 1 }
+          ]
+        },
+        {
+          id: "g14",
+          text: "If a tradition is challenged, you…",
+          options: [
+            { text: "Shut down the challenge outright.", value: 5 },
+            { text: "Reflect on its core purpose; change only if necessary.", value: 4 },
+            { text: "Defend it with evidence and reasoning.", value: 3 },
+            { text: "Consider how the change might impact the future.", value: 2 },
+            { text: "Mediate between both sides.", value: 1 }
+          ]
+        },
+        {
+          id: "g15",
+          text: "When you need comfort, you…",
+          options: [
+            { text: "Retreat behind your defenses.", value: 5 },
+            { text: "Indulge in familiar rituals or habits.", value: 4 },
+            { text: "Ground yourself in stillness.", value: 3 },
+            { text: "Distract your mind with observation or planning.", value: 2 },
+            { text: "Reach out to care for others, using service as solace.", value: 1 }
           ]
         }
       ]
@@ -214,11 +214,11 @@ export const guardianArchetype: Archetype = {
           id: "g16",
           text: "When someone repeatedly asks for help, you…",
           options: [
-            { text: "Offer structured support with boundaries.", value: 3 },
-            { text: "Keep helping, even at your own expense.", value: 4 },
             { text: "Directly address the dependency issue.", value: 5 },
-            { text: "Offer guidance, but withdraw if there's no progress.", value: 1 },
-            { text: "Analyze if there's a hidden problem.", value: 5 }
+            { text: "Monitor them closely from then on.", value: 4 },
+            { text: "Offer structured support with boundaries.", value: 3 },
+            { text: "Keep helping, even at your own expense.", value: 2 },
+            { text: "Offer guidance, but withdraw if there's no progress.", value: 1 }
           ]
         },
         {
@@ -226,9 +226,9 @@ export const guardianArchetype: Archetype = {
           text: "If someone betrays your trust, you…",
           options: [
             { text: "Cut them off immediately.", value: 5 },
-            { text: "Monitor them closely from then on.", value: 5 },
+            { text: "Monitor them closely from then on.", value: 4 },
             { text: "Distance yourself but keep things civil.", value: 3 },
-            { text: "Try to understand and help them change.", value: 4 },
+            { text: "Try to understand and help them change.", value: 2 },
             { text: "Withdraw your energy and move on quietly.", value: 1 }
           ]
         },
@@ -236,11 +236,11 @@ export const guardianArchetype: Archetype = {
           id: "g18",
           text: "When you're not in control, you…",
           options: [
-            { text: "Stay present, let things unfold.", value: 1 },
             { text: "Get tense and push for authority.", value: 5 },
-            { text: "Look for where you can help regardless.", value: 4 },
-            { text: "Focus on what you can influence, observe all else.", value: 5 },
-            { text: "Keep your own part in order, regardless of the rest.", value: 3 }
+            { text: "Focus on what you can influence, observe all else.", value: 4 },
+            { text: "Look for where you can help regardless.", value: 3 },
+            { text: "Keep your own part in order, regardless of the rest.", value: 2 },
+            { text: "Stay present, let things unfold.", value: 1 }
           ]
         },
         {
@@ -248,21 +248,21 @@ export const guardianArchetype: Archetype = {
           text: "In moments of uncertainty, you…",
           options: [
             { text: "Analyze every detail for signals.", value: 5 },
-            { text: "Stay rooted, let time reveal answers.", value: 1 },
-            { text: "Reaffirm your habits.", value: 3 },
-            { text: "Double down on control.", value: 5 },
-            { text: "Step up to provide direction for others.", value: 4 }
+            { text: "Double down on control.", value: 4 },
+            { text: "Step up to provide direction for others.", value: 3 },
+            { text: "Reaffirm your habits.", value: 2 },
+            { text: "Stay rooted, let time reveal answers.", value: 1 }
           ]
         },
         {
           id: "g20",
           text: "If your advice is ignored, you…",
           options: [
-            { text: "Let go—people learn in their own time.", value: 1 },
-            { text: "Keep trying until you're heard.", value: 4 },
             { text: "Withdraw and stop offering.", value: 5 },
-            { text: "Watch the consequences unfold, ready to step in if needed.", value: 5 },
-            { text: "Restate your point more gently.", value: 3 }
+            { text: "Watch the consequences unfold, ready to step in if needed.", value: 4 },
+            { text: "Keep trying until you're heard.", value: 3 },
+            { text: "Restate your point more gently.", value: 2 },
+            { text: "Let go—people learn in their own time.", value: 1 }
           ]
         }
       ]
@@ -276,57 +276,57 @@ export const guardianArchetype: Archetype = {
       questions: [
         {
           id: "g21",
-          text: "When facing a threat, you…",
+          text: "When you're recognized for your efforts, you…",
           options: [
-            { text: "Stand your ground and repel.", value: 5 },
-            { text: "Put yourself between others and harm.", value: 4 },
-            { text: "Plan several responses.", value: 2 },
-            { text: "Protect key resources or traditions.", value: 3 },
-            { text: "Endure, staying unmoved.", value: 5 }
+            { text: "Stay reserved, not showing much.", value: 5 },
+            { text: "Receive the recognition with calm gratitude.", value: 4 },
+            { text: "Credit the team or others.", value: 3 },
+            { text: "Thank the person, then move on.", value: 2 },
+            { text: "Note who gives praise, wonder what it signals.", value: 1 }
           ]
         },
         {
           id: "g22",
-          text: "If a tradition is challenged, you…",
+          text: "If asked to take a big risk, you…",
           options: [
-            { text: "Defend it with evidence and reasoning.", value: 3 },
-            { text: "Shut down the challenge outright.", value: 5 },
-            { text: "Reflect on its core purpose; change only if necessary.", value: 5 },
-            { text: "Consider how the change might impact the future.", value: 2 },
-            { text: "Mediate between both sides.", value: 4 }
+            { text: "Refuse unless every detail is secured.", value: 5 },
+            { text: "Only proceed if it won't uproot your core.", value: 4 },
+            { text: "Go for it if it helps someone.", value: 3 },
+            { text: "Calculate the odds, proceed if safe.", value: 2 },
+            { text: "Prefer to stay within established boundaries.", value: 1 }
           ]
         },
         {
           id: "g23",
-          text: "When you need comfort, you…",
+          text: "When chaos surrounds you, you…",
           options: [
-            { text: "Retreat behind your defenses.", value: 5 },
-            { text: "Indulge in familiar rituals or habits.", value: 3 },
-            { text: "Distract your mind with observation or planning.", value: 2 },
-            { text: "Ground yourself in stillness.", value: 5 },
-            { text: "Reach out to care for others, using service as solace.", value: 4 }
+            { text: "Remain unmoved, creating a center of calm.", value: 5 },
+            { text: "Act decisively to restore order.", value: 4 },
+            { text: "Guide others to safety and stability.", value: 3 },
+            { text: "Assess the situation before responding.", value: 2 },
+            { text: "Let the storm pass, then rebuild what's needed.", value: 1 }
           ]
         },
         {
           id: "g24",
-          text: "When you're recognized for your efforts, you…",
+          text: "When others are in crisis, you…",
           options: [
-            { text: "Credit the team or others.", value: 4 },
-            { text: "Thank the person, then move on.", value: 3 },
-            { text: "Stay reserved, not showing much.", value: 5 },
-            { text: "Receive the recognition with calm gratitude.", value: 5 },
-            { text: "Note who gives praise, wonder what it signals.", value: 2 }
+            { text: "Provide unwavering support and guidance.", value: 5 },
+            { text: "Help them find their own strength.", value: 4 },
+            { text: "Create a safe space for them to process.", value: 3 },
+            { text: "Offer practical solutions and resources.", value: 2 },
+            { text: "Stand by them until they're stable again.", value: 1 }
           ]
         },
         {
           id: "g25",
-          text: "If asked to take a big risk, you…",
+          text: "In times of change, you…",
           options: [
-            { text: "Refuse unless every detail is secured.", value: 5 },
-            { text: "Go for it if it helps someone.", value: 4 },
-            { text: "Only proceed if it won't uproot your core.", value: 5 },
-            { text: "Calculate the odds, proceed if safe.", value: 2 },
-            { text: "Prefer to stay within established boundaries.", value: 3 }
+            { text: "Maintain your core values and principles.", value: 5 },
+            { text: "Adapt while preserving what's essential.", value: 4 },
+            { text: "Guide others through the transition.", value: 3 },
+            { text: "Assess what needs to change and what doesn't.", value: 2 },
+            { text: "Provide stability for those who need it.", value: 1 }
           ]
         }
       ]
@@ -398,7 +398,7 @@ export const guardianArchetype: Archetype = {
         mask: "Anchor"
       }
     },
-      wall: {
+    wall: {
       shielded: {
         title: "Wall | Shielded",
         diagnosis: "You enforce rules, but when threatened, you retreat to old shields. Real guardians stand even when tested. Do not fold now.",

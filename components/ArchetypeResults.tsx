@@ -6,6 +6,7 @@ import { getArchetype } from '../lib/archetypes'
 interface ArchetypeResultsProps {
   archetype: string
   onReset: () => void
+  recommendedCards?: string[]
 }
 
 interface FieldNodeInfo {
@@ -98,32 +99,46 @@ const fieldNodeData: { [key: string]: FieldNodeInfo } = {
     rank: 6,
     law: 'Unbinds reality—brings motion, escape, and new perspectives.',
     mythicDescription: 'The Wanderer is unbound—shifting realities, never confined to a single path or form. Their power is motion itself, always beyond reach, always finding the next opening.',
+    color: 'from-purple-600 to-purple-700',
+    accentColor: 'purple',
+    backgroundGradient: 'from-gray-900 via-purple-900 to-purple-800',
+    particleColor: 'purple',
+    glowColor: 'purple',
+    uniqueTraits: ['Reality shifting', 'Boundary dissolution', 'Perspective expansion', 'Escape artistry'],
+    challenges: ['Rootlessness', 'Commitment avoidance', 'Disconnection', 'Lack of follow-through'],
+    strengths: ['Adaptability', 'Perspective shifting', 'Freedom seeking', 'Boundary breaking'],
+    fieldImpact: 'Unbinds reality—brings motion, escape, and new perspectives.'
+  },
+  'Guardian': {
+    rank: 7,
+    law: 'Protects what matters—creates safety and stability in chaos.',
+    mythicDescription: 'The Guardian stands as the unbreakable wall between chaos and what must be preserved. They are the steady hand that holds the line, the presence that makes others feel safe.',
+    color: 'from-green-600 to-green-700',
+    accentColor: 'green',
+    backgroundGradient: 'from-gray-900 via-green-900 to-green-800',
+    particleColor: 'green',
+    glowColor: 'green',
+    uniqueTraits: ['Protective instinct', 'Stability creation', 'Safety provision', 'Boundary setting'],
+    challenges: ['Over-protectiveness', 'Rigidity', 'Control issues', 'Burnout'],
+    strengths: ['Reliability', 'Protective presence', 'Stability provision', 'Trust building'],
+    fieldImpact: 'Protects what matters—creates safety and stability in chaos.'
+  },
+  'Vessel': {
+    rank: 8,
+    law: 'Releases blocks—restores flow, energy, and healing to the system.',
+    mythicDescription: 'The Vessel is the conduit through which energy flows, clearing blockages and restoring harmony. They are the open channel that allows healing and transformation to occur.',
     color: 'from-cyan-600 to-cyan-700',
     accentColor: 'cyan',
     backgroundGradient: 'from-gray-900 via-cyan-900 to-cyan-800',
     particleColor: 'cyan',
     glowColor: 'cyan',
-    uniqueTraits: ['Movement fluidity', 'Map changing', 'Boundary crossing', 'Novelty craving'],
-    challenges: ['Rootlessness', 'Lack of commitment', 'Escapism', 'Difficulty settling'],
-    strengths: ['Adaptability', 'Freedom seeking', 'Exploration drive', 'Perspective shifting'],
-    fieldImpact: 'Unbinds reality—brings motion, escape, and new perspectives.'
-  },
-  'Servant': {
-    rank: 7,
-    law: 'Releases blocks—restores flow, energy, and healing to the system.',
-    mythicDescription: 'The Servant becomes the conduit for force, change, and insight, clearing all blockages in their wake. By letting power flow through, they unlock transformation for all.',
-    color: 'from-emerald-600 to-emerald-700',
-    accentColor: 'emerald',
-    backgroundGradient: 'from-gray-900 via-emerald-900 to-emerald-800',
-    particleColor: 'emerald',
-    glowColor: 'emerald',
     uniqueTraits: ['Flow state', 'Openness', 'Conduit ability', 'Cleansing presence'],
     challenges: ['Absorption of others\' chaos', 'Lack of self-boundary', 'Passivity', 'Emotional overload'],
     strengths: ['Energy conducting', 'Blockage clearing', 'Openness', 'Insight flow'],
     fieldImpact: 'Releases blocks—restores flow, energy, and healing to the system.'
   },
   'Seeker': {
-    rank: 8,
+    rank: 9,
     law: 'Breaks every limit—reveals what\'s hidden and dissolves illusion.',
     mythicDescription: 'The Seeker dissolves systems, breaks through illusions, and pierces every limit to reach the unknown. Their gift is not to bend reality, but to end every trap and start anew.',
     color: 'from-purple-600 to-purple-700',
@@ -137,7 +152,7 @@ const fieldNodeData: { [key: string]: FieldNodeInfo } = {
     fieldImpact: 'Breaks every limit—reveals what\'s hidden and dissolves illusion.'
   },
   'Mask': {
-    rank: 9,
+    rank: 10,
     law: 'Guides reality by controlling what is seen and believed.',
     mythicDescription: 'The Mask wields the art of appearance, warping outcomes by what is shown or hidden. They can change the field\'s reality simply by shifting what others believe is true.',
     color: 'from-gray-600 to-gray-700',
@@ -151,7 +166,7 @@ const fieldNodeData: { [key: string]: FieldNodeInfo } = {
     fieldImpact: 'Guides reality by controlling what is seen and believed.'
   },
   'Partner': {
-    rank: 10,
+    rank: 11,
     law: 'Amplifies and aligns—reflects strength, exposes what is real.',
     mythicDescription: 'The Partner shapes the world by echo, tuning and magnifying whatever is near. Their presence can stabilize chaos or turn harmony into feedback that transforms everything.',
     color: 'from-red-600 to-red-700',
@@ -163,21 +178,6 @@ const fieldNodeData: { [key: string]: FieldNodeInfo } = {
     challenges: ['Over-absorption', 'Lack of boundaries', 'Identity loss', 'Co-dependency'],
     strengths: ['Deep resonance', 'Emotional attunement', 'Connection building', 'Reflection'],
     fieldImpact: 'Amplifies and aligns—reflects strength, exposes what is real.'
-  },
-
-  'Guardian': {
-    rank: 11,
-    law: 'Holds the boundary—anchors and stabilizes, prevents collapse.',
-    mythicDescription: 'The Guardian holds boundaries so nothing falls apart, preserving the line between order and chaos. Their strength is to endure and protect, allowing others to build atop their certainty.',
-    color: 'from-blue-600 to-blue-700',
-    accentColor: 'blue',
-    backgroundGradient: 'from-gray-900 via-blue-900 to-blue-800',
-    particleColor: 'blue',
-    glowColor: 'blue',
-    uniqueTraits: ['Boundary holding', 'Stability creation', 'Protection instinct', 'Endurance power'],
-    challenges: ['Rigidity', 'Over-protection', 'Stagnation', 'Isolation'],
-    strengths: ['Boundary maintenance', 'Stability provision', 'Protection ability', 'Endurance capacity'],
-    fieldImpact: 'Holds the boundary—anchors and stabilizes, prevents collapse.'
   },
   'Spotlight': {
     rank: 12,
@@ -192,73 +192,44 @@ const fieldNodeData: { [key: string]: FieldNodeInfo } = {
     challenges: ['Over-dependence on validation', 'Attention seeking', 'Performance anxiety', 'Identity confusion'],
     strengths: ['Natural charisma', 'Energy amplification', 'Center creation', 'Attention command'],
     fieldImpact: 'Becomes the center—attracts attention and focuses energy.'
-  },
-
+  }
 }
 
-export default function ArchetypeResults({ archetype, onReset }: ArchetypeResultsProps) {
-  const [showUniqueContent, setShowUniqueContent] = useState(false)
-  const archetypeData = getArchetype(archetype.toLowerCase())
-  
-  // Handle case sensitivity - normalize archetype name to match fieldNodeData keys
+export default function ArchetypeResults({ archetype, onReset, recommendedCards = [] }: ArchetypeResultsProps) {
+  const [showDetails, setShowDetails] = useState(false)
+
   const normalizeArchetypeName = (name: string) => {
-    // Decode URL encoding if present
-    const decodedName = decodeURIComponent(name)
-    
-         // Handle common variations and typos
-     const variations: { [key: string]: string } = {
-       'partner': 'Partner',
-       'guardian': 'Guardian',
-       'spotlight': 'Spotlight',
-       'spotligth': 'Spotlight', // Handle typo
-       'rebel': 'Rebel',
-       'equalizer': 'Equalizer',
-       'visionary': 'Visionary',
-       'visionnary': 'Visionary', // Handle typo with double 'n'
-       'servant': 'Servant',
-       'vessel': 'Servant',
-       'channel': 'Servant',
-       'mask': 'Mask',
-       'wanderer': 'Wanderer',
-       'provider': 'Provider',
-       'prvider': 'Provider', // Handle typo missing 'o'
-       'sovereign': 'Sovereign',
-       'seeker': 'Seeker'
-     }
-    
-    const lowerName = decodedName.toLowerCase()
-    if (variations[lowerName]) {
-      return variations[lowerName]
-    }
-    
-    // More robust fallback - try to match partial names
-    const availableArchetypes = Object.keys(fieldNodeData)
-    for (const archetype of availableArchetypes) {
-      if (lowerName.includes(archetype.toLowerCase()) || archetype.toLowerCase().includes(lowerName)) {
-        return archetype
-      }
-    }
-    
-    // Final fallback to capitalizing first letter
-    return decodedName.charAt(0).toUpperCase() + decodedName.slice(1).toLowerCase()
+    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
   }
   
   const normalizedArchetype = normalizeArchetypeName(archetype)
-  const fieldNodeInfo = fieldNodeData[normalizedArchetype] || fieldNodeData['Guardian']
-  
-  // For display purposes, use the original archetype name if it's a known variation
-  const displayArchetype = archetype.toLowerCase() === 'vessel' ? 'Vessel' : 
-                          archetype.toLowerCase() === 'channel' ? 'Channel' : 
-                          normalizedArchetype
+  const fieldNode = fieldNodeData[normalizedArchetype]
+
+  if (!fieldNode) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center text-white">
+          <h1 className="text-2xl font-bold mb-4">Archetype Not Found</h1>
+          <p className="mb-6">The archetype "{archetype}" could not be found.</p>
+          <button
+            onClick={onReset}
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+          >
+            Take Quiz Again
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br ${fieldNodeInfo.backgroundGradient} flex items-center justify-center p-4 relative overflow-hidden`}>
+    <div className={`min-h-screen bg-gradient-to-br ${fieldNode.backgroundGradient} flex items-center justify-center p-4 relative overflow-hidden`}>
       {/* Subtle animated background particles */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className={`absolute w-0.5 h-0.5 bg-${fieldNodeInfo.particleColor}-400/20 rounded-full animate-pulse`}
+            className={`absolute w-0.5 h-0.5 bg-${fieldNode.particleColor}-400/20 rounded-full animate-pulse`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -274,119 +245,68 @@ export default function ArchetypeResults({ archetype, onReset }: ArchetypeResult
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/20 backdrop-blur-sm border border-white/10 mb-8">
             <span className="text-white/80 text-sm font-medium">Field Node Reality-Impact Ranking</span>
-            <div className={`ml-3 w-8 h-8 rounded-full bg-gradient-to-r ${fieldNodeInfo.color} flex items-center justify-center`}>
-              <span className="text-white font-bold text-sm">{fieldNodeInfo.rank}</span>
+            <div className={`ml-3 w-8 h-8 rounded-full bg-gradient-to-r ${fieldNode.color} flex items-center justify-center`}>
+              <span className="text-white font-bold text-sm">{fieldNode.rank}</span>
             </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-            {displayArchetype}
+            {normalizedArchetype}
           </h1>
           
           <div className="max-w-2xl mx-auto">
             <p className="text-xl text-white/90 leading-relaxed font-light">
-              {fieldNodeInfo.mythicDescription}
+              {fieldNode.mythicDescription}
             </p>
           </div>
         </div>
 
-        {/* Main Content Grid */}
+        {/* Law & Field Impact */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {/* Left Column */}
-          <div className="space-y-8">
-            {/* Your Law */}
-            <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/10">
-              <div className="flex items-center mb-4">
-                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNodeInfo.color} rounded-full mr-4`}></div>
-                <h3 className="text-xl font-semibold text-white">Your Law</h3>
-              </div>
-              <p className="text-2xl font-bold text-white/95 leading-relaxed italic">
-                "{fieldNodeInfo.law}"
-              </p>
-            </div>
-
-            {/* Reality Impact Level */}
-            <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/10">
-              <div className="flex items-center mb-6">
-                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNodeInfo.color} rounded-full mr-4`}></div>
-                <h3 className="text-xl font-semibold text-white">Reality Impact Level</h3>
-              </div>
-              
-              <div className="flex items-center space-x-6">
-                <div className="text-center">
-                  <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${fieldNodeInfo.color} flex items-center justify-center mb-2 shadow-lg`}>
-                    <span className="text-white font-bold text-2xl">{fieldNodeInfo.rank}</span>
-                  </div>
-                  <p className="text-white/70 text-sm font-medium">of 12</p>
-                </div>
-                <div className="flex-1">
-                  <p className="text-white/90 text-lg leading-relaxed">
-                    {fieldNodeInfo.rank <= 3 ? (
-                      "You wield direct reality-shaping power. Your actions create immediate, visible change in the world around you."
-                    ) : fieldNodeInfo.rank <= 6 ? (
-                      "You operate at the level of transformation and synthesis. Your influence reshapes systems and creates new possibilities."
-                    ) : fieldNodeInfo.rank <= 9 ? (
-                      "You work through perception and flow. Your power lies in shifting perspectives and conducting change."
-                    ) : (
-                      "You are the foundation and support. Your strength is in creating stability and enabling others to thrive."
-                    )}
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Law */}
+          <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+            <h2 className="text-3xl font-bold mb-6 text-center text-white">
+              Your Law
+            </h2>
+            <p className="text-xl text-center text-white/80 leading-relaxed">
+              {fieldNode.law}
+            </p>
           </div>
 
-          {/* Right Column */}
-          <div className="space-y-8">
-            {/* Core Pattern */}
-            {archetypeData && (
-              <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <div className={`w-2 h-8 bg-gradient-to-b ${fieldNodeInfo.color} rounded-full mr-4`}></div>
-                  <h3 className="text-xl font-semibold text-white">Core Pattern</h3>
-                </div>
-                <p className="text-white/90 text-lg leading-relaxed">
-                  {archetypeData.description}
-                </p>
-              </div>
-            )}
-
-            {/* Field Impact */}
-            <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/10">
-              <div className="flex items-center mb-4">
-                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNodeInfo.color} rounded-full mr-4`}></div>
-                <h3 className="text-xl font-semibold text-white">Field Impact</h3>
-              </div>
-              <p className="text-white/90 text-lg leading-relaxed italic">
-                "{fieldNodeInfo.fieldImpact}"
-              </p>
-            </div>
+          {/* Field Impact */}
+          <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+            <h2 className="text-3xl font-bold mb-6 text-center text-white">
+              Your Field Impact
+            </h2>
+            <p className="text-xl text-center text-white/80 leading-relaxed">
+              {fieldNode.fieldImpact}
+            </p>
           </div>
         </div>
 
-        {/* Unique Powers Section */}
+        {/* Unique Powers Button */}
         <div className="text-center mb-12">
           <button
-            onClick={() => setShowUniqueContent(!showUniqueContent)}
-            className={`bg-gradient-to-r ${fieldNodeInfo.color} text-white py-4 px-8 rounded-xl hover:scale-105 transition-all duration-300 transform shadow-xl font-semibold text-lg`}
+            onClick={() => setShowDetails(!showDetails)}
+            className={`bg-gradient-to-r ${fieldNode.color} text-white py-4 px-8 rounded-xl hover:scale-105 transition-all duration-300 transform shadow-xl font-semibold text-lg`}
           >
-            {showUniqueContent ? 'Hide' : 'Reveal'} Your Unique Powers
+            {showDetails ? 'Hide' : 'Reveal'} Your Unique Powers
           </button>
         </div>
 
         {/* Unique Powers Content */}
-        {showUniqueContent && (
+        {showDetails && (
           <div className="grid lg:grid-cols-3 gap-8 mb-12 animate-fade-in">
             {/* Unique Traits */}
             <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/10">
               <div className="flex items-center mb-6">
-                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNodeInfo.color} rounded-full mr-4`}></div>
+                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNode.color} rounded-full mr-4`}></div>
                 <h3 className="text-xl font-semibold text-white">Unique Traits</h3>
               </div>
               <ul className="space-y-3">
-                {fieldNodeInfo.uniqueTraits.map((trait, index) => (
+                {fieldNode.uniqueTraits.map((trait, index) => (
                   <li key={index} className="flex items-center text-white/90">
-                    <div className={`w-2 h-2 bg-${fieldNodeInfo.accentColor}-400 rounded-full mr-3 flex-shrink-0`}></div>
+                    <div className={`w-2 h-2 bg-${fieldNode.accentColor}-400 rounded-full mr-3 flex-shrink-0`}></div>
                     <span className="text-sm font-medium">{trait}</span>
                   </li>
                 ))}
@@ -396,13 +316,13 @@ export default function ArchetypeResults({ archetype, onReset }: ArchetypeResult
             {/* Strengths */}
             <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/10">
               <div className="flex items-center mb-6">
-                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNodeInfo.color} rounded-full mr-4`}></div>
+                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNode.color} rounded-full mr-4`}></div>
                 <h3 className="text-xl font-semibold text-white">Core Strengths</h3>
               </div>
               <ul className="space-y-3">
-                {fieldNodeInfo.strengths.map((strength, index) => (
+                {fieldNode.strengths.map((strength, index) => (
                   <li key={index} className="flex items-center text-white/90">
-                    <div className={`w-2 h-2 bg-${fieldNodeInfo.accentColor}-400 rounded-full mr-3 flex-shrink-0`}></div>
+                    <div className={`w-2 h-2 bg-${fieldNode.accentColor}-400 rounded-full mr-3 flex-shrink-0`}></div>
                     <span className="text-sm font-medium">{strength}</span>
                   </li>
                 ))}
@@ -412,13 +332,13 @@ export default function ArchetypeResults({ archetype, onReset }: ArchetypeResult
             {/* Growth Areas */}
             <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 border border-white/10">
               <div className="flex items-center mb-6">
-                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNodeInfo.color} rounded-full mr-4`}></div>
+                <div className={`w-2 h-8 bg-gradient-to-b ${fieldNode.color} rounded-full mr-4`}></div>
                 <h3 className="text-xl font-semibold text-white">Growth Areas</h3>
               </div>
               <ul className="space-y-3">
-                {fieldNodeInfo.challenges.map((challenge, index) => (
+                {fieldNode.challenges.map((challenge, index) => (
                   <li key={index} className="flex items-center text-white/90">
-                    <div className={`w-2 h-2 bg-${fieldNodeInfo.accentColor}-400 rounded-full mr-3 flex-shrink-0`}></div>
+                    <div className={`w-2 h-2 bg-${fieldNode.accentColor}-400 rounded-full mr-3 flex-shrink-0`}></div>
                     <span className="text-sm font-medium">{challenge}</span>
                   </li>
                 ))}
@@ -430,28 +350,28 @@ export default function ArchetypeResults({ archetype, onReset }: ArchetypeResult
         {/* Action Buttons */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <button
-            onClick={() => window.location.href = `/chamber/${displayArchetype.toLowerCase()}`}
-            className={`bg-gradient-to-r ${fieldNodeInfo.color} text-white py-4 px-8 rounded-xl hover:scale-105 transition-all duration-300 transform shadow-xl font-semibold text-lg`}
+            onClick={() => window.location.href = `/chamber/${normalizedArchetype.toLowerCase()}`}
+            className={`bg-gradient-to-r ${fieldNode.color} text-white py-4 px-8 rounded-xl hover:scale-105 transition-all duration-300 transform shadow-xl font-semibold text-lg`}
           >
             Enter Your Chamber
           </button>
           <button
             onClick={() => {
-              const url = `${window.location.origin}/quiz/results?archetype=${displayArchetype}`
+              const url = `${window.location.origin}/quiz?archetype=${normalizedArchetype}`
               if (navigator.share) {
                 navigator.share({
-                  title: `My Archetype: ${displayArchetype}`,
-                  text: `I discovered I'm a ${displayArchetype} (Rank #${fieldNodeInfo.rank})! Take the quiz to find your archetype.`,
+                  title: `My Archetype: ${normalizedArchetype}`,
+                  text: `I discovered I'm a ${normalizedArchetype} (Rank #${fieldNode.rank})! Take the quiz to find your archetype.`,
                   url: url
                 })
               } else {
                 navigator.clipboard.writeText(url)
-                alert('Results link copied to clipboard!')
+                alert('Quiz link copied to clipboard!')
               }
             }}
             className="bg-white/10 text-white py-4 px-8 rounded-xl hover:bg-white/20 transition-all duration-300 backdrop-blur-sm font-semibold text-lg border border-white/20"
           >
-            Share Results
+            Share Quiz
           </button>
         </div>
       </div>

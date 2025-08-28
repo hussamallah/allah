@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
 interface PageActivity {
@@ -17,13 +17,24 @@ export default function HiddenPageTimer() {
   const [currentPage, setCurrentPage] = useState(pathname)
   const [startTime, setStartTime] = useState(Date.now())
   const [userId, setUserId] = useState<string>('')
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const lastUpdateRef = useRef<number>(Date.now())
+  const pageStartTimeRef = useRef<number>(Date.now())
 
   useEffect(() => {
     console.log("HiddenPageTimer MOUNTED", { pathname });
   }, []);
 
   useEffect(() => {
-    // Track ALL pages - no restrictions
+    // Check if this is a War Room page - don't track these
+    const isWarRoomPage = pathname.startsWith('/war-room')
+    
+    if (isWarRoomPage) {
+      console.log('🚫 Skipping timer tracking for War Room page:', pathname)
+      return
+    }
+    
+    // Track ALL other pages - no restrictions
     const isEngagementPage = true
     
     if (isEngagementPage) {
@@ -41,36 +52,152 @@ export default function HiddenPageTimer() {
       
       setUserId(existingUserId)
 
-      // Send initial page entry to war room
+      // Send initial page entry to war room (0 seconds)
       sendPageActivity(existingUserId, pathname, 0)
     }
   }, [pathname])
 
   useEffect(() => {
-    // Track ALL pages - no restrictions
+    // Check if this is a War Room page - don't track these
+    const isWarRoomPage = pathname.startsWith('/war-room')
+    
+    if (isWarRoomPage) {
+      console.log('🚫 Skipping timer tracking for War Room page:', pathname)
+      return
+    }
+    
+    // Track ALL other pages - no restrictions
     const isEngagementPage = true
     
     if (!isEngagementPage) return
 
-    // Page changed - calculate time spent and send update
-    if (currentPage !== pathname && currentPage && userId) {
-      const timeSpent = Math.floor((Date.now() - startTime) / 1000)
-      sendPageActivity(userId, currentPage, timeSpent)
+    // Clear existing interval
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
     }
 
-    // Update current page and reset timer
-    setCurrentPage(pathname)
-    setStartTime(Date.now())
+    // Page changed - calculate time spent on previous page and send update
+    if (currentPage !== pathname && currentPage && userId) {
+      const timeSpentOnPreviousPage = Math.floor((Date.now() - pageStartTimeRef.current) / 1000)
+      console.log(`⏱️ Time spent on ${currentPage}: ${timeSpentOnPreviousPage}s`)
+      sendPageActivity(userId, currentPage, timeSpentOnPreviousPage)
+    }
 
-    // Send new page entry
+    // Update current page and reset timer for new page
+    setCurrentPage(pathname)
+    pageStartTimeRef.current = Date.now()
+    lastUpdateRef.current = Date.now()
+
+    // Send new page entry (0 seconds for new page)
     if (userId) {
       sendPageActivity(userId, pathname, 0)
+      
+      // Start continuous tracking for current page
+      intervalRef.current = setInterval(() => {
+        const timeSpent = Math.floor((Date.now() - lastUpdateRef.current) / 1000)
+        if (timeSpent >= 30) { // Update every 30 seconds
+          console.log(`⏱️ Periodic update for ${pathname}: ${timeSpent}s`)
+          sendPageActivity(userId, pathname, timeSpent)
+          lastUpdateRef.current = Date.now()
+        }
+      }, 30000) // Check every 30 seconds
+    }
+
+    // Cleanup function
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+      }
     }
   }, [pathname, userId])
 
+  // Handle page unload events (user closes tab, navigates away, etc.)
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      // Don't send data if we're on a War Room page
+      const isWarRoomPage = pathname.startsWith('/war-room')
+      if (isWarRoomPage) return
+      
+      if (userId && currentPage) {
+        const timeSpent = Math.floor((Date.now() - pageStartTimeRef.current) / 1000)
+        console.log(`⏱️ Final time for ${currentPage} (beforeunload): ${timeSpent}s`)
+        
+        // Use sendBeacon for more reliable delivery during page unload
+        sendPageActivityBeacon(userId, currentPage, timeSpent)
+      }
+    }
+
+    const handlePageHide = () => {
+      // Don't send data if we're on a War Room page
+      const isWarRoomPage = pathname.startsWith('/war-room')
+      if (isWarRoomPage) return
+      
+      if (userId && currentPage) {
+        const timeSpent = Math.floor((Date.now() - pageStartTimeRef.current) / 1000)
+        console.log(`⏱️ Final time for ${currentPage} (pagehide): ${timeSpent}s`)
+        
+        // Use sendBeacon for more reliable delivery during page unload
+        sendPageActivityBeacon(userId, currentPage, timeSpent)
+      }
+    }
+
+    const handleVisibilityChange = () => {
+      // Don't send data if we're on a War Room page
+      const isWarRoomPage = pathname.startsWith('/war-room')
+      if (isWarRoomPage) return
+      
+      if (document.visibilityState === 'hidden' && userId && currentPage) {
+        const timeSpent = Math.floor((Date.now() - pageStartTimeRef.current) / 1000)
+        console.log(`⏱️ Final time for ${currentPage} (visibilitychange): ${timeSpent}s`)
+        
+        // Use sendBeacon for more reliable delivery during page unload
+        sendPageActivityBeacon(userId, currentPage, timeSpent)
+      }
+    }
+
+    // Add all event listeners
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    window.addEventListener('pagehide', handlePageHide)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload)
+      window.removeEventListener('pagehide', handlePageHide)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+      
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+      }
+    }
+  }, [userId, currentPage, pathname])
+
+  // Use sendBeacon for reliable data sending during page unload
+  const sendPageActivityBeacon = (id: string, page: string, timeSpent: number) => {
+    try {
+      const activity = {
+        userId: id,
+        currentPage: page,
+        timeSpent: timeSpent,
+        lastActivity: new Date().toISOString()
+      }
+
+      // Use sendBeacon for more reliable delivery during page unload
+      if (navigator.sendBeacon) {
+        const blob = new Blob([JSON.stringify(activity)], { type: 'application/json' })
+        const success = navigator.sendBeacon('/api/war-room/page-activity', blob)
+        console.log(` Beacon sent for ${page}: ${success ? '✅ Success' : '❌ Failed'}`)
+      } else {
+        // Fallback to fetch if sendBeacon is not available
+        sendPageActivity(id, page, timeSpent)
+      }
+    } catch (error) {
+      console.error('❌ Error sending beacon:', error)
+    }
+  }
+
   const sendPageActivity = async (id: string, page: string, timeSpent: number) => {
     try {
-      console.log("Timer sending page activity", { id, page, timeSpent });
+      console.log("🧪 TESTING: Timer sending page activity", { id, page, timeSpent });
       
       const activity: PageActivity = {
         userId: id,
@@ -80,20 +207,24 @@ export default function HiddenPageTimer() {
       }
 
       // Send to war room API
-      await fetch('/api/war-room/page-activity', {
+      const response = await fetch('/api/war-room/page-activity', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(activity)
       })
 
-      console.log('📊 Sent page activity:', { id, page, timeSpent })
+      if (response.ok) {
+        console.log('✅ TESTING: Successfully sent page activity:', { id, page, timeSpent })
+      } else {
+        console.error('❌ TESTING: Failed to send page activity:', response.status)
+      }
       
       // Trigger immediate War Room update by broadcasting a custom event
       window.dispatchEvent(new CustomEvent('pageActivityUpdate', {
         detail: { userId: id, page, timeSpent }
       }))
     } catch (error) {
-      console.error('❌ Error sending page activity:', error)
+      console.error('❌ TESTING: Error sending page activity:', error)
     }
   }
 

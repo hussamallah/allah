@@ -53,6 +53,8 @@ export async function updateSession(request: NextRequest) {
     "/chamber",
     "/chambers",
     "/quiz",
+    "/quiz-v2",
+    "/quiz-v2-debug",
     "/war-room",
     "/war-room/login",
     "/api"

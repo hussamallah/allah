@@ -1,8 +1,8 @@
 import { Archetype } from './index'
 
-export const vesselArchetype: Archetype = {
-  key: "vessel",
-  name: "Vessel",
+export const servantArchetype: Archetype = {
+  key: "servant",
+  name: "Servant",
   color: "#059669",
   accentColor: "#10b981",
   glowColor: "rgba(5, 150, 105, 0.5)",

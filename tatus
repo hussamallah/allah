@@ -1,0 +1,5 @@
+[33m5f2b158[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m Add simulation tests to CI to prevent golden drift
+[33mcda676e[m Update goldens to correct trigger counts (triggers counted on pureA1 in Phase B)
+[33m11c6ed6[m Fix utm-tracking API route - handle missing env vars gracefully
+[33m5f807fe[m Fix post-purchase-events API route - handle missing env vars gracefully
+[33mb688e36[m Fresh start - clean vercel.json and fixed codebase

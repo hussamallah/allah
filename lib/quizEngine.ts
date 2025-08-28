@@ -4,7 +4,7 @@
 import { QUIZ_CONFIG, type Archetype, type Trigger, type RWeight, type PhaseAItem, type PhaseAOption, type PhaseBTemplate, type QuizStep, type RenderedOption, type BehaviorSample, type QuizResult } from "./quizConfig";
 
 // =============== Types ===============
-export type DeliveryVersion = "V1" | "V2";
+// Removed V1/V2 delivery version - reverting to single chamber system
 
 // =============== Engine State ===============
 type Scores = Record<Archetype, number>;
@@ -84,8 +84,6 @@ export class QuizEngine {
 
     const rIndex = this.computeRIndex();
 
-    const deliveryVersion: DeliveryVersion = rIndex < QUIZ_CONFIG.scoring.routeThreshold ? "V1" : "V2";
-
     // Final arbitration tie-breaker (Phase 6 requirement)
     let dual = false;
     if (this.marginPct < 4) {
@@ -104,7 +102,7 @@ export class QuizEngine {
       triggers: validTriggers,
       triggerCounts: this.triggerCounts,
       rIndex,
-      deliveryVersion,
+
       flips: 0, // Will be computed externally by simulator/oracle
       dual,
       audit: { 
@@ -302,6 +300,10 @@ export class QuizEngine {
     const λ = QUIZ_CONFIG.scoring.decayLambda;
 
     // decay existing scores first (older answers matter less)
+    // Invariant (tested):
+    // next >= prev * (1 - decay)
+    // Increment = next - prev * (1 - decay) >= -EPS
+    // Rationale: decay first, then add new gain (diminishing returns by design).
     for (const a of QUIZ_CONFIG.archetypes) this.scores[a] *= λ;
 
     // add new weights

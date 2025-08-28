@@ -12,6 +12,24 @@ import { getAllWandererResults } from './wandererStageTestUtils';
 import { getAllEqualizerResults } from './equalizerStageTestUtils';
 import { getAllSeekerResults } from './seekerStageTestUtils';
 
+// Elastic Archetype Engine mapping for legacy archetype names
+const archetypeMapping: Record<string, string> = {
+  'visionary': 'Visionary',
+  'guardian': 'Guardian', 
+  'mask': 'Mask',
+  'partner': 'Partner',
+  'provider': 'Provider',
+  'rebel': 'Rebel',
+  'sovereign': 'Sovereign',
+  'spotlight': 'Spotlight',
+  'test-stage-seeker': 'Seeker',
+  'wanderer': 'Wanderer',
+  'equalizer': 'Equalizer',
+  'seeker': 'Seeker',
+  // Handle legacy "Servant" -> "Vessel" mapping
+  'servant': 'Servant'
+};
+
 export const archetypeConfigs: { [key: string]: ArchetypeConfig } = {
   visionary: {
     name: 'Visionary',
@@ -89,4 +107,17 @@ export const archetypeConfigs: { [key: string]: ArchetypeConfig } = {
 
 export function getArchetypeConfig(archetype: string): ArchetypeConfig | null {
   return archetypeConfigs[archetype] || null;
+}
+
+// New function to get Elastic Archetype Engine archetype name
+export function getEngineArchetypeName(legacyName: string): string {
+  return archetypeMapping[legacyName.toLowerCase()] || legacyName;
+}
+
+// New function to get legacy archetype name from engine name
+export function getLegacyArchetypeName(engineName: string): string {
+  const reverseMapping = Object.fromEntries(
+    Object.entries(archetypeMapping).map(([k, v]) => [v.toLowerCase(), k])
+  );
+  return reverseMapping[engineName.toLowerCase()] || engineName.toLowerCase();
 } 

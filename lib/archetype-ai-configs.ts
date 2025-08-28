@@ -901,7 +901,7 @@ export function getArchetypeFieldBehavior(archetype: string): {
       tone: "Future Node. The Field demands present truth. Stay here.",
       escalation: "Your vision is escape. Face now.",
       challenge: "Stay in the present moment until it breaks you."
-    },
+  },
     servant: {
       tone: "Support Node. The Field demands your own needs. Claim them.",
       escalation: "Your service is hiding. Demand.",

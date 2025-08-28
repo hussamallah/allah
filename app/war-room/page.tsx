@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import dynamic from 'next/dynamic'
 
-
 interface UserProfile {
   id: string
   email: string
@@ -22,8 +21,6 @@ interface UserProfile {
 }
 
 interface SessionData {}
-
-
 
 function WarRoomPageComponent() {
   const [users, setUsers] = useState<UserProfile[]>([])
@@ -140,8 +137,8 @@ function WarRoomPageComponent() {
           const result = await response.json()
           console.log('✅ Delete successful:', result)
           
-                  // Remove user from local state
-        setUsers(prev => prev.filter(user => (user.user_id || user.id) !== userId))
+          // Remove user from local state
+          setUsers(prev => prev.filter(user => (user.user_id || user.id) !== userId))
           closeUserModal()
           alert('Profile deleted successfully')
         } else {
@@ -215,19 +212,12 @@ function WarRoomPageComponent() {
     }
   }
 
-
-
   // Filter users based on current filters
   const filteredUsers = users.filter(user => {
     if (filterArchetype !== 'all' && user.archetype !== filterArchetype) return false
     if (filterPhase !== 'all' && user.phase !== filterPhase) return false
     return true
   })
-
-  const handleLogout = () => {
-    localStorage.removeItem('adminUsername')
-    router.push('/war-room/login')
-  }
 
   const getArchetypeEmoji = (archetype: string) => {
     const emojis: Record<string, string> = {
@@ -286,7 +276,6 @@ function WarRoomPageComponent() {
     const pageNames: Record<string, string> = {
       '/': 'Landing Page',
       '/quiz': 'Quiz',
-      '/quiz/results': 'Quiz Results',
       '/chamber/spotlight': 'Spotlight Chamber',
       '/chamber/spotlight/explore-who-you-are': 'Explore Who You Are',
       '/chamber/spotlight/field-proof': 'Field Proof',
@@ -375,68 +364,71 @@ function WarRoomPageComponent() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <div className="bg-gray-900 border-b border-gray-800 p-4">
-        <div className="flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl font-bold text-red-400">WAR ROOM</h1>
-            <p className="text-gray-400">Real-Time Psychological Field Observatory</p>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span className="text-gray-300">Admin: <span className="text-red-400 font-bold">{adminUsername}</span></span>
-            <button
-              onClick={handleLogout}
-              className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-300"
-            >
-              Logout
-            </button>
-          </div>
+    <div className="min-h-screen bg-black text-white p-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-red-400 mb-2">WAR ROOM DASHBOARD</h1>
+          <p className="text-gray-400">Real-Time Psychological Field Observatory</p>
         </div>
-      </div>
 
-      <div className="flex h-[calc(100vh-100px)]">
-        {/* Left Sidebar - User Grid */}
-        <div className="w-1/3 border-r border-gray-800 p-4 overflow-y-auto">
-          <div className="mb-4">
-            <h2 className="text-xl font-bold mb-4">Active Users ({filteredUsers.length})</h2>
-            
-            {/* Filters */}
-            <div className="space-y-2 mb-4">
-              <select
-                value={filterArchetype}
-                onChange={(e) => setFilterArchetype(e.target.value)}
-                className="w-full bg-gray-900 border border-gray-700 rounded px-2 py-1 text-sm"
-              >
-                <option value="all">All Archetypes</option>
-                <option value="seeker">🧠 Seeker</option>
-                <option value="guardian">🛡️ Guardian</option>
-                <option value="rebel">⚔️ Rebel</option>
-                <option value="provider">🛒 Provider</option>
-                <option value="spotlight">🌟 Spotlight</option>
-                <option value="equalizer">⚖️ Equalizer</option>
-                <option value="sovereign">👑 Sovereign</option>
-                <option value="visionary">🔮 Visionary</option>
-                <option value="wanderer">🚶 Wanderer</option>
-                <option value="mask">🎭 Mask</option>
-                <option value="sage">🧙 Sage</option>
-                <option value="mystic">✨ Mystic</option>
-                <option value="servant">🙏 Servant</option>
-              </select>
+        <div className="flex h-[calc(100vh-200px)]">
+          {/* Left Sidebar - User Grid */}
+          <div className="w-1/3 border-r border-gray-800 p-4 overflow-y-auto">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold mb-4">Active Users ({filteredUsers.length})</h2>
               
-              <select
-                value={filterPhase}
-                onChange={(e) => setFilterPhase(e.target.value)}
-                className="w-full bg-gray-900 border border-gray-700 rounded px-2 py-1 text-sm"
-              >
-                <option value="all">All Phases</option>
-                <option value="quiz">Quiz</option>
-                <option value="answer-sequence">Answer Sequence</option>
-                <option value="chamber">Chamber</option>
-                <option value="post-chamber">Post-Chamber</option>
-              </select>
+              {/* Filters */}
+              <div className="space-y-2 mb-4">
+                <select
+                  value={filterArchetype}
+                  onChange={(e) => setFilterArchetype(e.target.value)}
+                  className="w-full bg-gray-900 border border-gray-700 rounded px-2 py-1 text-sm"
+                >
+                  <option value="all">All Archetypes</option>
+                  <option value="seeker">🧠 Seeker</option>
+                  <option value="guardian">🛡️ Guardian</option>
+                  <option value="rebel">⚔️ Rebel</option>
+                  <option value="provider">🛒 Provider</option>
+                  <option value="spotlight">🌟 Spotlight</option>
+                  <option value="equalizer">⚖️ Equalizer</option>
+                  <option value="sovereign">👑 Sovereign</option>
+                  <option value="visionary">🔮 Visionary</option>
+                  <option value="wanderer">🚶 Wanderer</option>
+                  <option value="mask">🎭 Mask</option>
+                  <option value="sage">🧙 Sage</option>
+                  <option value="mystic">✨ Mystic</option>
+                  <option value="servant">🙏 Servant</option>
+                </select>
+                
+                <select
+                  value={filterPhase}
+                  onChange={(e) => setFilterPhase(e.target.value)}
+                  className="w-full bg-gray-900 border border-gray-700 rounded px-2 py-1 text-sm"
+                >
+                  <option value="all">All Phases</option>
+                  <option value="quiz">Quiz</option>
+                  <option value="answer-sequence">Answer Sequence</option>
+                  <option value="chamber">Chamber</option>
+                  <option value="post-chamber">Post-Chamber</option>
+                </select>
 
-              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    checked={selectedProfiles.size === filteredUsers.length && filteredUsers.length > 0}
+                    onChange={handleSelectAll}
+                    className="rounded"
+                  />
+                  <span className="text-sm text-gray-400">
+                    Select All ({selectedProfiles.size} selected)
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bulk Delete Controls */}
+            <div className="mb-4 flex items-center justify-between bg-gray-800 rounded-lg p-3">
+              <div className="flex items-center space-x-3">
                 <input
                   type="checkbox"
                   checked={selectedProfiles.size === filteredUsers.length && filteredUsers.length > 0}
@@ -447,154 +439,133 @@ function WarRoomPageComponent() {
                   Select All ({selectedProfiles.size} selected)
                 </span>
               </div>
+              <div className="flex items-center space-x-2">
+                {selectedProfiles.size > 0 && (
+                  <button
+                    onClick={handleBulkDelete}
+                    className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-300 text-sm"
+                  >
+                    Delete Selected ({selectedProfiles.size})
+                  </button>
+                )}
+              </div>
             </div>
-          </div>
 
-          {/* Bulk Delete Controls */}
-          <div className="mb-4 flex items-center justify-between bg-gray-800 rounded-lg p-3">
-            <div className="flex items-center space-x-3">
-              <input
-                type="checkbox"
-                checked={selectedProfiles.size === filteredUsers.length && filteredUsers.length > 0}
-                onChange={handleSelectAll}
-                className="rounded"
-              />
-              <span className="text-sm text-gray-400">
-                Select All ({selectedProfiles.size} selected)
-              </span>
-            </div>
-            <div className="flex items-center space-x-2">
-              {selectedProfiles.size > 0 && (
-                <button
-                  onClick={handleBulkDelete}
-                  className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-300 text-sm"
+            {/* User Cards */}
+            <div className="space-y-3">
+              {filteredUsers.length === 0 ? (
+                <div className="text-gray-400 text-center p-4">
+                  No users found. Users array: {users.length}
+                </div>
+              ) : null}
+              {filteredUsers.map((user) => (
+                <div 
+                  key={user.user_id || user.id} 
+                  className={`bg-gray-900 rounded-lg p-3 border-l-4 ${user.isDormant ? 'border-gray-600' : 'border-green-500'} hover:bg-gray-800 transition-colors duration-200`}
                 >
-                  Delete Selected ({selectedProfiles.size})
-                </button>
-              )}
-
-            </div>
-          </div>
-
-          {/* User Cards */}
-          <div className="space-y-3">
-            {filteredUsers.length === 0 ? (
-              <div className="text-gray-400 text-center p-4">
-                No users found. Users array: {users.length}
-              </div>
-            ) : null}
-            {filteredUsers.map((user) => (
-              <div 
-                key={user.user_id || user.id} 
-                className={`bg-gray-900 rounded-lg p-3 border-l-4 ${user.isDormant ? 'border-gray-600' : 'border-green-500'} hover:bg-gray-800 transition-colors duration-200`}
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={selectedProfiles.has(user.user_id || user.id)}
-                      onChange={(e) => {
-                        e.stopPropagation()
-                        handleSelectProfile(user.user_id || user.id)
-                      }}
-                      className="rounded"
-                    />
-                    <span 
-                      className="text-xl cursor-pointer" 
-                      onClick={() => handleUserClick(user)}
-                    >
-                      {getArchetypeEmoji(user.archetype)}
-                    </span>
-                    <span 
-                      className="font-semibold text-sm cursor-pointer" 
-                      onClick={() => handleUserClick(user)}
-                    >
-                      {user.archetype.toUpperCase()}
-                    </span>
-                  </div>
-                  <div className={`px-2 py-1 rounded text-xs text-white ${getPhaseColor(user.phase)}`}>
-                    {user.phase}
-                  </div>
-                </div>
-                
-                <div className="cursor-pointer" onClick={() => handleUserClick(user)}>
-                  <div className="text-xs text-gray-400 mb-2">{user.email}</div>
-                  
-                  {user.user_id && (
-                    <div className="text-xs text-purple-400 mb-1">
-                      ID: {user.user_id}
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={selectedProfiles.has(user.user_id || user.id)}
+                        onChange={(e) => {
+                          e.stopPropagation()
+                          handleSelectProfile(user.user_id || user.id)
+                        }}
+                        className="rounded"
+                      />
+                      <span 
+                        className="text-xl cursor-pointer" 
+                        onClick={() => handleUserClick(user)}
+                      >
+                        {getArchetypeEmoji(user.archetype)}
+                      </span>
+                      <span 
+                        className="font-semibold text-sm cursor-pointer" 
+                        onClick={() => handleUserClick(user)}
+                      >
+                        {user.archetype.toUpperCase()}
+                      </span>
                     </div>
-                  )}
-                  
-                  <div className="text-xs text-gray-500">
-                    Last: {getTimeSinceActivity(user.lastActivity)}
+                    <div className={`px-2 py-1 rounded text-xs text-white ${getPhaseColor(user.phase)}`}>
+                      {user.phase}
+                    </div>
                   </div>
                   
-
+                  <div className="cursor-pointer" onClick={() => handleUserClick(user)}>
+                    <div className="text-xs text-gray-400 mb-2">{user.email}</div>
+                    
+                    {user.user_id && (
+                      <div className="text-xs text-purple-400 mb-1">
+                        ID: {user.user_id}
+                      </div>
+                    )}
+                    
+                    <div className="text-xs text-gray-500">
+                      Last: {getTimeSinceActivity(user.lastActivity)}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-
-
-        {/* Analytics */}
-        <div className="w-1/2 p-4 overflow-y-auto">
-          <h2 className="text-xl font-bold mb-4">Analytics & Intelligence</h2>
-          
-          {/* System Stats */}
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div className="bg-gray-900 rounded-lg p-3">
-              <div className="text-2xl font-bold text-green-400">{users.length}</div>
-              <div className="text-sm text-gray-400">Active Users</div>
-            </div>
-            <div className="bg-gray-900 rounded-lg p-3">
-              <div className="text-2xl font-bold text-yellow-400">
-                {users.filter(u => u.isDormant).length}
-              </div>
-              <div className="text-sm text-gray-400">Dormant (&gt;10min)</div>
-            </div>
-            <div className="bg-gray-900 rounded-lg p-3">
-              <div className="text-2xl font-bold text-blue-400">
-                {users.filter(u => u.phase === 'post-chamber').length}
-              </div>
-              <div className="text-sm text-gray-400">Completed</div>
-            </div>
-            <div className="bg-gray-900 rounded-lg p-3">
-              <div className="text-2xl font-bold text-red-400">
-                {users.filter(u => u.phase === 'quiz').length}
-              </div>
-              <div className="text-sm text-gray-400">In Progress</div>
+              ))}
             </div>
           </div>
 
-          {/* Archetype Distribution */}
-          <div className="bg-gray-900 rounded-lg p-4 mb-6">
-            <h3 className="font-bold mb-3">Node Distribution</h3>
-            <div className="space-y-2">
-              {Array.from(new Set(users.map(u => u.archetype))).map(archetype => {
-                const count = users.filter(u => u.archetype === archetype).length
-                const percentage = (count / users.length) * 100
-                return (
-                  <div key={archetype} className="flex items-center justify-between">
-                    <span className="text-sm">{getArchetypeEmoji(archetype)} {archetype}</span>
-                    <span className="text-sm text-gray-400">{count} ({percentage.toFixed(0)}%)</span>
-                  </div>
-                )
-              })}
+          {/* Analytics */}
+          <div className="w-1/2 p-4 overflow-y-auto">
+            <h2 className="text-xl font-bold mb-4">Analytics & Intelligence</h2>
+            
+            {/* System Stats */}
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-gray-900 rounded-lg p-3">
+                <div className="text-2xl font-bold text-green-400">{users.length}</div>
+                <div className="text-sm text-gray-400">Active Users</div>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-3">
+                <div className="text-2xl font-bold text-yellow-400">
+                  {users.filter(u => u.isDormant).length}
+                </div>
+                <div className="text-sm text-gray-400">Dormant (&gt;10min)</div>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-3">
+                <div className="text-2xl font-bold text-blue-400">
+                  {users.filter(u => u.phase === 'post-chamber').length}
+                </div>
+                <div className="text-sm text-gray-400">Completed</div>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-3">
+                <div className="text-2xl font-bold text-red-400">
+                  {users.filter(u => u.phase === 'quiz').length}
+                </div>
+                <div className="text-sm text-gray-400">In Progress</div>
+              </div>
             </div>
-          </div>
 
-                    {/* User Activity Monitor */}
-          <div className="bg-blue-900/20 border border-blue-700/50 rounded-lg p-4 mb-6">
-            <div 
-              className="flex items-center justify-between cursor-pointer hover:bg-blue-800/20 p-2 rounded transition-colors duration-200"
-              onClick={() => router.push('/war-room/page-timers')}
-            >
-              <h3 className="font-bold text-blue-400">🕐 User Activity Monitor</h3>
-              <span className="text-blue-400 text-sm">→ View Details</span>
+            {/* Archetype Distribution */}
+            <div className="bg-gray-900 rounded-lg p-4 mb-6">
+              <h3 className="font-bold mb-3">Node Distribution</h3>
+              <div className="space-y-2">
+                {Array.from(new Set(users.map(u => u.archetype))).map(archetype => {
+                  const count = users.filter(u => u.archetype === archetype).length
+                  const percentage = (count / users.length) * 100
+                  return (
+                    <div key={archetype} className="flex items-center justify-between">
+                      <span className="text-sm">{getArchetypeEmoji(archetype)} {archetype}</span>
+                      <span className="text-sm text-gray-400">{count} ({percentage.toFixed(0)}%)</span>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
+
+            {/* User Activity Monitor */}
+            <div className="bg-blue-900/20 border border-blue-700/50 rounded-lg p-4 mb-6">
+              <div 
+                className="flex items-center justify-between cursor-pointer hover:bg-blue-800/20 p-2 rounded transition-colors duration-200"
+                onClick={() => router.push('/war-room/page-timers')}
+              >
+                <h3 className="font-bold text-blue-400">🕐 User Activity Monitor</h3>
+                <span className="text-blue-400 text-sm">→ View Details</span>
+              </div>
               <div className="space-y-2 text-sm">
                 {users.length === 0 ? (
                   <div className="text-gray-400">No user activities available</div>
@@ -627,22 +598,23 @@ function WarRoomPageComponent() {
                   </>
                 )}
               </div>
-          </div>
+            </div>
 
-          {/* Critical Alerts */}
-          <div className="bg-red-900/20 border border-red-700/50 rounded-lg p-4">
-            <h3 className="font-bold text-red-400 mb-3">⚠️ Critical Alerts</h3>
-            <div className="space-y-2 text-sm">
-              {users.filter(u => u.isDormant).map(user => (
-                <div key={user.user_id || user.id} className="text-yellow-300">
-                  {user.email}: Dormant for {getTimeSinceActivity(user.lastActivity)}
-                </div>
-              ))}
-              {users.filter(u => u.phase === 'post-chamber').map(user => (
-                <div key={user.user_id || user.id} className="text-green-300">
-                  {user.email}: Completed journey
-                </div>
-              ))}
+            {/* Critical Alerts */}
+            <div className="bg-red-900/20 border border-red-700/50 rounded-lg p-4">
+              <h3 className="font-bold text-red-400 mb-3">⚠️ Critical Alerts</h3>
+              <div className="space-y-2 text-sm">
+                {users.filter(u => u.isDormant).map(user => (
+                  <div key={user.user_id || user.id} className="text-yellow-300">
+                    {user.email}: Dormant for {getTimeSinceActivity(user.lastActivity)}
+                  </div>
+                ))}
+                {users.filter(u => u.phase === 'post-chamber').map(user => (
+                  <div key={user.user_id || user.id} className="text-green-300">
+                    {user.email}: Completed journey
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -671,8 +643,6 @@ function WarRoomPageComponent() {
 
             {/* Modal Content */}
             <div className="p-6 space-y-6">
-
-
               {/* Session Timeline */}
               <div className="bg-gray-800 rounded-lg p-4">
                 <h3 className="font-bold mb-3">Session Timeline</h3>
@@ -734,8 +704,6 @@ function WarRoomPageComponent() {
                   <div className="text-gray-400 text-sm">No time data available</div>
                 )}
               </div>
-
-
 
               {/* Delete Profile Button */}
               <div className="flex justify-end pt-4 border-t border-gray-700">

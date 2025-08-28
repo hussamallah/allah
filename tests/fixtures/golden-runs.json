@@ -18,8 +18,7 @@
       "rIndex": {
         "min": 0,
         "max": 70
-      },
-      "delivery": "V1"
+      }
     }
   },
   "flip-mid-run": {
@@ -41,8 +40,7 @@
       "rIndex": {
         "min": 0,
         "max": 50
-      },
-      "delivery": "V1"
+      }
     }
   },
   "high-r-imprinter": {
@@ -64,8 +62,7 @@
       "rIndex": {
         "min": 70,
         "max": 100
-      },
-      "delivery": "V2"
+      }
     }
   },
   "low-r-literalist": {
@@ -87,8 +84,7 @@
       "rIndex": {
         "min": 0,
         "max": 50
-      },
-      "delivery": "V1"
+      }
     }
   }
 }

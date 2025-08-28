@@ -6,7 +6,7 @@ import { equalizerArchetype } from './equalizer'
 import { rebelArchetype } from './rebel'
 import { visionaryArchetype } from './visionary'
 import { wandererArchetype } from './wanderer'
-import { vesselArchetype } from './servant'
+import { servantArchetype } from './servant'
 import { maskArchetype } from './mask'
 import { providerArchetype } from './provider'
 import { sovereignArchetype } from './sovereign'
@@ -71,7 +71,7 @@ export const archetypes: { [key: string]: Archetype } = {
   rebel: rebelArchetype,
   visionary: visionaryArchetype,
   wanderer: wandererArchetype,
-  vessel: vesselArchetype,
+  servant: servantArchetype,
   mask: maskArchetype,
   provider: providerArchetype,
   sovereign: sovereignArchetype,

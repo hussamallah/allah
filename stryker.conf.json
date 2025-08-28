@@ -1,0 +1,71 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress",
+    "dashboard"
+  ],
+  "testRunner": "vitest",
+  "coverageAnalysis": "perTest",
+  "mutate": [
+    "lib/**/*.ts",
+    "!lib/**/*.d.ts",
+    "!lib/**/*.test.ts",
+    "!lib/**/*.spec.ts"
+  ],
+  "mutator": {
+    "name": "typescript",
+    "excludedMutations": [
+      "StringLiteral",
+      "ArrayLiteral"
+    ]
+  },
+  "testRunnerOptions": {
+    "vitest": {
+      "configFile": "vitest.config.ts"
+    }
+  },
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": 50
+  },
+  "dashboard": {
+    "project": "quiz-engine",
+    "version": "main",
+    "module": "hardening"
+  },
+  "htmlReporter": {
+    "fileName": "reports/mutation/html/index.html"
+  },
+  "clearTextReporter": {
+    "logLevel": "info",
+    "maxLogLines": 5,
+    "allowTerminalResize": true
+  },
+  "timeoutMS": 30000,
+  "concurrency": 4,
+  "maxConcurrentTestRunners": 2,
+  "sandbox": {
+    "enabled": true,
+    "maxConcurrency": 2
+  },
+  "warnAboutPlaceholders": false,
+  "ignoreStatic": false,
+  "inPlace": false,
+  "dryRunTimeoutMinutes": 5,
+  "maxTestRunnerReuse": 0,
+  "disableTypeChecks": false,
+  "checker": {
+    "name": "typescript",
+    "options": {
+      "configFile": "tsconfig.json"
+    }
+  },
+  "plugins": [
+    "@stryker-mutator/typescript-checker",
+    "@stryker-mutator/vitest-runner"
+  ]
+}

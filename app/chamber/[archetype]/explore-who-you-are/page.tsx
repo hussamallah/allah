@@ -94,12 +94,12 @@ You trust your own rules and live them.`
   },
   provider: {
     name: '🛒 PROVIDER',
-    color: '#059669',
-    primaryColor: '#059669',
+    color: '#b45309',
+    primaryColor: '#b45309',
     secondaryColor: '#000000',
-    accentColor: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.5)',
-    powerColor: 'rgba(16, 185, 129, 0.3)',
+    accentColor: '#d97706',
+    glowColor: 'rgba(217, 119, 6, 0.5)',
+    powerColor: 'rgba(217, 119, 6, 0.3)',
     emoji: '🛒',
     youNow: `You are the giver, the sustainer, the one who feeds, supports, and holds everyone else together.
 You sense what's needed before it's said, and you step up.
@@ -116,12 +116,12 @@ You trust that you are enough, even when you're not needed.`
   // The key is that spotlight is now included and the page will work
   equalizer: {
     name: '⚖️ EQUALIZER',
-    color: '#7c3aed',
-    primaryColor: '#7c3aed',
+    color: '#0d9488',
+    primaryColor: '#0d9488',
     secondaryColor: '#000000',
-    accentColor: '#8b5cf6',
-    glowColor: 'rgba(139, 92, 246, 0.5)',
-    powerColor: 'rgba(139, 92, 246, 0.3)',
+    accentColor: '#14b8a6',
+    glowColor: 'rgba(20, 184, 166, 0.5)',
+    powerColor: 'rgba(20, 184, 166, 0.3)',
     emoji: '⚖️',
     youNow: `You're the balance point in any room—the one who can sense tension, see all sides, and bring people or situations back into harmony.
 You're driven to fix what's unfair, to smooth conflict, and to make things right.
@@ -135,12 +135,12 @@ Life feels fair because you include yourself in the equation.`
   },
   visionary: {
     name: '🔮 VISIONARY',
-    color: '#8b5cf6',
-    primaryColor: '#8b5cf6',
+    color: '#4338ca',
+    primaryColor: '#4338ca',
     secondaryColor: '#000000',
-    accentColor: '#a78bfa',
-    glowColor: 'rgba(167, 139, 250, 0.5)',
-    powerColor: 'rgba(167, 139, 250, 0.3)',
+    accentColor: '#6366f1',
+    glowColor: 'rgba(99, 102, 241, 0.5)',
+    powerColor: 'rgba(99, 102, 241, 0.3)',
     emoji: '🔮',
     youNow: `You live a step ahead of everyone else—ideas arrive before events, and you see possibilities long before the world is ready.
 You predict trends, notice shifts, and often feel like you're walking in a timeline no one else can see.
@@ -176,12 +176,12 @@ You keep your sense of possibility, but you also feel anchored and whole, not sc
   },
   servant: {
     name: '🤲 SERVANT',
-    color: '#065f46',
-    primaryColor: '#065f46',
+    color: '#059669',
+    primaryColor: '#059669',
     secondaryColor: '#000000',
-    accentColor: '#059669',
-    glowColor: 'rgba(5, 150, 105, 0.5)',
-    powerColor: 'rgba(5, 150, 105, 0.3)',
+    accentColor: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.5)',
+    powerColor: 'rgba(16, 185, 129, 0.3)',
     emoji: '🤲',
     youNow: `You carry the weight no one else wants.
 You see what needs fixing, what needs holding together, and you do it—often without being asked.
@@ -196,12 +196,12 @@ You enjoy your own strength, not just what you provide for others.`
   },
   mask: {
     name: '🎭 MASK',
-    color: '#6366f1',
-    primaryColor: '#6366f1',
+    color: '#6b7280',
+    primaryColor: '#6b7280',
     secondaryColor: '#000000',
-    accentColor: '#8b5cf6',
-    glowColor: 'rgba(139, 92, 246, 0.5)',
-    powerColor: 'rgba(139, 92, 246, 0.3)',
+    accentColor: '#9ca3af',
+    glowColor: 'rgba(156, 163, 175, 0.5)',
+    powerColor: 'rgba(156, 163, 175, 0.3)',
     emoji: '🎭',
     youNow: `You're the shapeshifter, the social chameleon, the one who can read a room and become whatever's needed to thrive.
 You blend in or stand out on command.
@@ -345,10 +345,10 @@ export default function ExploreWhoYouArePage() {
         />
       </div>
       
-      <div className="relative z-10 p-6 max-w-6xl mx-auto">
+      <div className="relative z-10 p-4 sm:p-6 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="text-8xl mb-6 animate-pulse" style={{ 
+        <div className="text-center mb-8 sm:mb-16">
+          <div className="text-4xl sm:text-6xl md:text-8xl mb-4 sm:mb-6 animate-pulse" style={{ 
             animationDuration: '3s',
             filter: `drop-shadow(0 0 20px ${config.color})`
           }}>
@@ -356,7 +356,7 @@ export default function ExploreWhoYouArePage() {
           </div>
           
           <h1 
-            className="text-5xl md:text-7xl font-bold mb-6 tracking-wider relative group"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-wider relative group"
             style={{ 
               color: config.color,
               textShadow: `0 0 30px ${config.color}`
@@ -367,11 +367,11 @@ export default function ExploreWhoYouArePage() {
             </span>
           </h1>
           
-          <p className="text-2xl text-gray-300 mb-4 animate-fade-in">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-3 sm:mb-4 animate-fade-in">
             Deep dive into your core identity and understand your true nature
           </p>
           
-          <div className="w-32 h-1 mx-auto mb-8 animate-pulse" 
+          <div className="w-24 sm:w-32 h-1 mx-auto mb-6 sm:mb-8 animate-pulse" 
                style={{ 
                  background: `linear-gradient(to right, ${config.color}, ${config.accentColor})`,
                  animationDuration: '4s' 
@@ -381,76 +381,73 @@ export default function ExploreWhoYouArePage() {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">
           {/* You Now Section */}
-          <div className="bg-gradient-to-r from-gray-900/20 to-gray-800/20 border rounded-2xl p-8 backdrop-blur-sm mb-8"
+          <div className="bg-gradient-to-r from-gray-900/20 to-gray-800/20 border rounded-2xl p-4 sm:p-6 md:p-8 backdrop-blur-sm mb-6 sm:mb-8"
                style={{ 
                  borderColor: `${config.color}30`,
                  boxShadow: `0 0 40px ${config.glowColor}`
                }}>
-            <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: config.color }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-center" style={{ color: config.color }}>
               You Now
             </h2>
-            <div className="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
+            <div className="text-gray-300 leading-relaxed text-base sm:text-lg whitespace-pre-line">
               {config.youNow}
             </div>
           </div>
 
           {/* Your Future Section */}
-          <div className="bg-gradient-to-r from-gray-900/20 to-gray-800/20 border rounded-2xl p-8 backdrop-blur-sm mb-8"
+          <div className="bg-gradient-to-r from-gray-900/20 to-gray-800/20 border rounded-2xl p-4 sm:p-6 md:p-8 backdrop-blur-sm mb-6 sm:mb-8"
                style={{ 
                  borderColor: `${config.accentColor}30`,
                  boxShadow: `0 0 40px ${config.powerColor}`
                }}>
-            <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: config.accentColor }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-center" style={{ color: config.accentColor }}>
               Your Future (What You Get)
             </h2>
-            <div className="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
+            <div className="text-gray-300 leading-relaxed text-base sm:text-lg whitespace-pre-line">
               {config.yourFuture}
             </div>
           </div>
 
           {/* Future Self Card */}
-          <Link href={`/chamber/${archetype}/who-you-are`} className="block mb-8" onClick={() => console.log('Future Self clicked!', archetype)}>
+          <Link href={`/chamber/${archetype}/who-you-are`} className="block mb-6 sm:mb-8" onClick={() => console.log('Future Self clicked!', archetype)}>
             <div className="group relative transform hover:scale-105 transition-all duration-500 cursor-pointer z-10">
-              <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/40 backdrop-blur-md border-2 rounded-2xl p-8 hover:border-opacity-70 transition-all duration-300"
+              <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/40 backdrop-blur-md border-2 rounded-2xl p-4 sm:p-6 md:p-8 hover:border-opacity-70 transition-all duration-300"
                    style={{ 
                      borderColor: `${config.color}50`,
                      boxShadow: `0 0 40px ${config.glowColor}`
                    }}>
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold group-hover:text-opacity-80 transition-colors" style={{ color: config.color }}>
+                <div className="flex items-center justify-between mb-4 sm:mb-6">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold group-hover:text-opacity-80 transition-colors" style={{ color: config.color }}>
                     🔮 FUTURE SELF
                   </h3>
-                  <div className="text-3xl animate-pulse">{config.emoji}</div>
+                  <div className="text-2xl sm:text-3xl animate-pulse">{config.emoji}</div>
                 </div>
-                <p className="text-gray-300 leading-relaxed text-lg mb-6">
+                <p className="text-gray-300 leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
                   Click to unlock your complete future self transformation and discover what happens when you fully embody your archetype's power.
                 </p>
                 <div className="text-center">
-                  <span className="text-lg font-medium group-hover:text-opacity-80 transition-colors inline-flex items-center" style={{ color: config.color }}>
+                  <button 
+                    className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium transition-all duration-300 hover:scale-105 transform inline-flex items-center"
+                    style={{ 
+                      backgroundColor: config.color,
+                      color: 'white',
+                      boxShadow: `0 0 20px ${config.glowColor}`
+                    }}
+                  >
                     <span className="mr-2">🚀</span>
                     Unlock Your Future Self →
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>
           </Link>
         </div>
 
-        {/* Debug Test Button */}
-        <div className="text-center mt-8 mb-4">
-          <button 
-            onClick={() => alert('React is working! Button clicked.')}
-            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition-colors"
-          >
-            🧪 Test Button (Click to verify React works)
-          </button>
-        </div>
-
         {/* Back Button */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-6 sm:mt-8">
           <Link
             href="/chambers"
-            className="inline-block text-gray-400 hover:text-white transition-colors duration-300"
+            className="inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm sm:text-base"
           >
             ← Back to All Chambers
           </Link>
@@ -464,7 +461,7 @@ export default function ExploreWhoYouArePage() {
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
           
           {/* Modal Content */}
-          <div className="relative z-10 bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-md border-2 rounded-3xl p-8 mx-4 max-w-lg w-full"
+          <div className="relative z-10 bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-md border-2 rounded-3xl p-4 sm:p-6 md:p-8 mx-4 max-w-lg w-full"
                style={{ 
                  borderColor: `${config.color}40`,
                  boxShadow: `0 0 60px ${config.glowColor}`
@@ -472,47 +469,47 @@ export default function ExploreWhoYouArePage() {
             {/* Back Button */}
             <button
               onClick={() => router.back()}
-              className="absolute top-4 left-4 text-gray-400 hover:text-white text-lg transition-colors flex items-center"
+              className="absolute top-3 sm:top-4 left-3 sm:left-4 text-gray-400 hover:text-white text-base sm:text-lg transition-colors flex items-center"
             >
               ← Back
             </button>
             
             {/* Modal Header */}
-            <div className="text-center mb-6 mt-8">
-              <div className="text-4xl mb-4" style={{ filter: `drop-shadow(0 0 20px ${config.color})` }}>
+            <div className="text-center mb-4 sm:mb-6 mt-6 sm:mt-8">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4" style={{ filter: `drop-shadow(0 0 20px ${config.color})` }}>
                 {config.emoji}
               </div>
-              <h2 className="text-2xl font-bold mb-4" style={{ color: config.color }}>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4" style={{ color: config.color }}>
                 Enter your email to save your complete results and unlock access to:
               </h2>
             </div>
             
             {/* Benefits List */}
-            <div className="text-gray-300 text-lg leading-relaxed mb-6 space-y-3">
+            <div className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 space-y-2 sm:space-y-3">
               <div className="flex items-start">
-                <span className="text-xl mr-3" style={{ color: config.color }}>–</span>
+                <span className="text-lg sm:text-xl mr-2 sm:mr-3" style={{ color: config.color }}>–</span>
                 <span>Your full "Who You Are Now" analysis</span>
               </div>
               <div className="flex items-start">
-                <span className="text-xl mr-3" style={{ color: config.color }}>–</span>
+                <span className="text-lg sm:text-xl mr-2 sm:mr-3" style={{ color: config.color }}>–</span>
                 <span>Your possible future if you follow the system</span>
               </div>
             </div>
             
-            <p className="text-gray-400 text-center mb-6">
+            <p className="text-gray-400 text-center mb-4 sm:mb-6 text-sm sm:text-base">
               You've already done the work—save your results and see what's possible.
             </p>
             
             {/* Email Form */}
             <form onSubmit={handleEmailSubmit}>
-              <div className="mb-6">
+              <div className="mb-4 sm:mb-6">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
                   required
-                  className="w-full px-6 py-4 bg-gray-900/50 border-2 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-900/50 border-2 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 text-base"
                   style={{ 
                     borderColor: `${config.color}30`
                   }}
@@ -522,7 +519,7 @@ export default function ExploreWhoYouArePage() {
               <button
                 type="submit"
                 disabled={isSubmitting || !email.trim()}
-                className="w-full px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="w-full px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 style={{ 
                   backgroundColor: config.color,
                   color: 'white',

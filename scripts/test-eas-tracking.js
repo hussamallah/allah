@@ -28,7 +28,7 @@ async function testEASTracking() {
           action: 'quiz_completed',
           score: 20,
           timestamp: new Date().toISOString(),
-          page: '/quiz/results',
+          page: '/quiz',
           details: { archetype: 'spotlight' }
         },
         {

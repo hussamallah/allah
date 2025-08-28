@@ -1,15 +1,27 @@
 // GroundZero v3 Configuration Constants
 // Centralized configuration for all v3 features
 
-import { Line, Face } from '../../types/quiz-v2';
+import { Line, Face, Verdict } from '../../types/quiz-v2';
 
 // ==================== FLOW CONSTANTS ====================
 export const V3_FLOW = {
-  // Phase progression
+  // FH limits
   FH_MAX_SCREENS: 9,
-  FH_MAX: 9,  // Alias for compatibility
-  FH_LOCK_MIN_SCREEN: 2,
-  
+  FH_MAX: 9,  // Alias used in validations
+  FH_MIN_LOCK: 2, // Q2 minimum to lock
+  FH_LOCK_MIN_SCREEN: 2, // Back-compat alias
+
+  // Phase 3 limits and budget
+  P3_MIN: 2,
+  P3_MAX: 4,
+  P3_BUDGET: 18,
+
+  // Under-clock items total window (used by R-Index)
+  UNDERCLOCK_TOTAL: 5,
+
+  // Fixed line order for tie-breaking
+  LINE_ORDER: ['Control', 'Pace', 'Boundary', 'Truth', 'Recognition', 'Bonding', 'Stress'] as Line[],
+
   // Face selection weights (heavy front-loading)
   FACE_WEIGHTS: {
     LAMBDA_PRIOR: 2.0,    // prior influence from FH
@@ -19,19 +31,30 @@ export const V3_FLOW = {
     THETA_EARLY: 3.0      // margin to commit after Q2
   },
   
-  // Early commit threshold
+  // Early commit threshold (kept for back-compat)
   FACE_EARLY_COMMIT_MARGIN: 3.0
 };
 
 // ==================== EVIDENCE CONSTANTS ====================
 export const V3_EVIDENCE = {
-  // FH exposure weights for token decay
+  // Global decay factor used for seed/token effective weights
+  DECAY_LAMBDA: 0.92,
+
+  // FH exposure weights used when emitting FH tokens
+  // expo=0 → 0.00, 1-2 → 0.50, 3-5 → 0.80, ≥6 → 1.00
   FH_EXPOSURE_WEIGHTS: {
-    DECAY_LAMBDA: 0.92,
-    MIN_EXPOSURE: 1,
-    MAX_EXPOSURE: 9
-  },
-  
+    0: 0.0,
+    1: 0.5,
+    2: 0.5,
+    3: 0.8,
+    4: 0.8,
+    5: 0.8,
+    6: 1.0,
+    7: 1.0,
+    8: 1.0,
+    9: 1.0
+  } as Record<number, number>,
+
   // FH attraction calculation weights
   FH_ATTRACTION_WEIGHTS: {
     HITS_RATE_WEIGHT: 0.65,
@@ -44,6 +67,23 @@ export const V3_EVIDENCE = {
     HIGH_THRESHOLD: 0.6,    // hits_rate ≥ 0.6 and expo ≥ 2
     MEDIUM_THRESHOLD: 0.5,  // hits_rate ≥ 0.5
     MIN_EXPOSURE: 2
+  }
+};
+
+// High-level config aggregator for tests/back-compat
+export const V3_CONFIG = {
+  DECAY_LAMBDA: V3_EVIDENCE.DECAY_LAMBDA,
+  INSTABILITY: {
+    LATENCY_THRESHOLD: 6000,
+    SWITCHES_THRESHOLD: 2,
+    DELIBERATION_THRESHOLD: 2500
+  },
+  R_INDEX: {
+    WEIGHTS: {
+      CHOICES: 0.60,
+      BEHAVIOR: 0.25,
+      UNDER_CLOCK: 0.15
+    }
   }
 };
 
@@ -78,6 +118,21 @@ export const V3_BEHAVIOR = {
   }
 };
 
+// ==================== AMBIGUITY CONSTANTS ====================
+export const V3_AMBIGUITY = {
+  BANDS: {
+    HIGHLY_AMBIGUOUS: 0.12,
+    CLEAR: 0.22,
+    VERY_CLEAR: 0.25
+  },
+  // < 0.12 → +2, 0.12–0.22 → +1, ≥ 0.22 → +0
+  getAmbiguityScore(margin: number): number {
+    if (margin < V3_AMBIGUITY.BANDS.HIGHLY_AMBIGUOUS) return 2;
+    if (margin < V3_AMBIGUITY.BANDS.CLEAR) return 1;
+    return 0;
+  }
+};
+
 // ==================== LINE ORDER CONSTANTS ====================
 export const V3_LINE_ORDER = [
   'Control', 'Pace', 'Boundary', 'Truth', 'Recognition', 'Bonding', 'Stress'
@@ -92,7 +147,16 @@ export const V3_FACE_MAPPING = {
   TRUTH: ['seeker', 'architect', 'alchemist'],
   RECOGNITION: ['spotlight', 'mask', 'artisan'],
   BONDING: ['provider', 'partner', 'servant'],
-  STRESS: ['wanderer', 'diplomat']
+  STRESS: ['wanderer', 'diplomat'],
+
+  // Also provide line-name keys for convenience/tests
+  Control: ['sovereign', 'rebel', 'catalyst'],
+  Pace: ['strategist', 'navigator', 'visionary'],
+  Boundary: ['guardian', 'equalizer', 'sentinel'],
+  Truth: ['seeker', 'architect', 'alchemist'],
+  Recognition: ['spotlight', 'mask', 'artisan'],
+  Bonding: ['provider', 'partner', 'servant'],
+  Stress: ['wanderer', 'diplomat']
 };
 
 // ==================== FH→FACE ANCHOR LINE MAPPING ====================
@@ -157,13 +221,38 @@ export const V3_ANSWER_MAPPING = {
   }
 };
 
-// ==================== SPECIAL OVERRIDE CONSTANTS ====================
-export const V3_SPECIAL_OVERRIDE = {
-  // 2C+1F→O override (P3 tokens only)
-  TWO_C_ONE_F_TO_O: {
-    C_THRESHOLD: 2,
-    F_THRESHOLD: 1,
-    RESULT: 'O' as const
+// ==================== SPECIAL OVERRIDES ====================
+export const V3_OVERRIDES = {
+  // Checks for 2C + 1F among the provided verdicts (first three P3 tokens)
+  shouldApply2C1FOverride(verdicts: Verdict[]): boolean {
+    const cCount = verdicts.filter(v => v === 'C').length;
+    const fCount = verdicts.filter(v => v === 'F').length;
+    return cCount >= 2 && fCount >= 1;
+  }
+};
+
+// ==================== BASELINES ====================
+export const V3_BASELINES = {
+  // expo=0 → 4 items, 1-2 → 3 items, ≥3 → 2 items
+  getBaseline(expo: number): number {
+    if (expo === 0) return 4;
+    if (expo <= 2) return 3;
+    return 2;
+  }
+};
+
+// ==================== P3 SCORING ====================
+export const V3_SCORING = {
+  SEVERITY: {
+    C: 0,
+    O: 1,
+    F: 2
+  } as Record<Verdict, number>,
+  // expo=0→+2, expo=1-2→+1, else→+0
+  getExposurePenalty(expo: number): number {
+    if (expo === 0) return 2;
+    if (expo <= 2) return 1;
+    return 0;
   }
 };
 
@@ -172,6 +261,39 @@ export const V3_CONFIDENCE = {
   HIGH: 'high',
   MEDIUM: 'medium',
   LOW: 'low'
+};
+
+// ==================== INSTABILITY (utility wrapper) ====================
+export const V3_INSTABILITY = {
+  isUnstable(behavior: { latency_ms: number; switches: number; deliberation_ms: number }): boolean {
+    return V3_BEHAVIOR.isHesitantBehavior(behavior);
+  }
+};
+
+// ==================== R-INDEX CONFIG ====================
+export const V3_R_INDEX = {
+  WEIGHTS: {
+    CHOICES: 0.60,
+    BEHAVIOR: 0.25,
+    UNDER_CLOCK: 0.15
+  },
+  getStyleLabel(rIndexPercent: number): string {
+    if (rIndexPercent >= 85) return 'Decisive & Clean';
+    if (rIndexPercent >= 70) return 'Deliberate';
+    if (rIndexPercent >= 50) return 'Hesitant';
+    return 'Unsettled';
+  }
+};
+
+// ==================== DRILLDOWN TAGS ====================
+export const V3_DRILLDOWN_TAGS: Record<Line, string[]> = {
+  Control: ['RoomStatus', 'Delegation', 'SelfCheckLoop'],
+  Pace: ['OpenStream', 'DeadlineElastic', 'MultitaskDrift'],
+  Boundary: ['SoftNo', 'AfterYesRegret', 'CloseCostFear'],
+  Truth: ['ReasonSwitch', 'ApprovalCheck', 'EdgeCaseSpiral'],
+  Recognition: ['OpticsLead', 'ArtifactDelay', 'ChatterDrag'],
+  Bonding: ['Merging', 'AppeaseThenDelay', 'Availability'],
+  Stress: ['Scramble', 'NarrowOverNarrow', 'TimePressureLeak']
 };
 
 // ==================== UTILITY FUNCTIONS ====================
@@ -195,5 +317,28 @@ export const V3_UTILS = {
   canEarlyCommit(scores: number[], threshold: number): boolean {
     const [top, second] = V3_UTILS.getTop2Indices(scores);
     return scores[top] - scores[second] >= threshold;
+  },
+
+  // Calculate normalized margin between top two scores (0..1)
+  calculateMargin(winnerScore: number, secondScore: number): number {
+    const numerator = Math.max(0, winnerScore - secondScore);
+    const denominator = Math.max(1e-9, winnerScore + secondScore);
+    const margin = numerator / denominator;
+    return Math.max(0, Math.min(1, margin));
+  },
+
+  // Early C stop eligibility helper
+  isEarlyCStopEligible(
+    winner: Verdict | null,
+    margin: number,
+    instabilityFlag: boolean,
+    fhExpo: number
+  ): boolean {
+    return (
+      winner === 'C' &&
+      margin >= V3_AMBIGUITY.BANDS.VERY_CLEAR &&
+      !instabilityFlag &&
+      fhExpo >= 3
+    );
   }
 };
